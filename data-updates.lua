@@ -13,7 +13,7 @@ if parts.waste then
     plastic_toxic = plastic_toxic + 15
   end
   rm.AddProductRaw("plastic-bar", {type="fluid", name="chemical-waste", amount=plastic_toxic})
-  if mods["ThemTharHills"] then
+  if mods["ThemTharHills-Updated"] then
     if not rm.CheckIngredient("integrated-circuit", "silicon-wafer") then
       rm.AddProductRaw("integrated-circuit", {type="fluid", name="depleted-acid", amount=1})
       if data.raw.recipe["integrated-circuit-silver"] then
@@ -201,7 +201,7 @@ else
   rm.ReplaceIngredient("engine-unit", "iron-gear-wheel", "drive-belt", 1, 1)
 end
 
-if mods["ThemTharHills"] then
+if mods["ThemTharHills-Updated"] then
   tf.addPrereq("high-voltage-equipment", "rubber")
   rm.ReplaceProportional("advanced-cable", "plastic-bar", "rubber", 1)
   tf.removeRecipeUnlock("gold-processing", "nitric-acid-early")
@@ -310,7 +310,7 @@ if not mods["Krastorio2"] then
   rm.AddIngredient("express-underground-belt", "drive-belt", 8, 8)
 end
 
-if not mods["Krastorio2"] and not mods["ThemTharHills"] then
+if not mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
   rm.ReplaceIngredient("rocket-fuel", "light-oil", "nitric-acid", 10, 10)
 end
 
@@ -324,7 +324,7 @@ if mods["LunarLandings"] then
   rm.AddIngredient("ll-lunar-foundation", "toluene", 1, 1)
   rm.AddIngredient("ll-astrocrystal-processing", "toluene", 1, 1)
 
-  --if not mods["ThemTharHills"] then
+  --if not mods["ThemTharHills-Updated"] then
     --rm.AddIngredient("ll-rich-moon-rock-processing", "nitric-acid", 25, 25)
   --end
 
@@ -339,7 +339,7 @@ if mods["LunarLandings"] then
     tf.addRecipeUnlock("ll-steam-condenser", "waste-treatment-water-recovery")
     tf.addRecipeUnlock("ll-quantum-resource-processing", "astral-waste-treatment")
 
-    if mods["ThemTharHills"] then
+    if mods["ThemTharHills-Updated"] then
       rm.RemoveProduct("astral-waste-treatment", "petroleum-gas", 25)
       rm.AddProductRaw("astral-waste-treatment", {type="fluid", name="depleted-acid", amount=50})
     end
@@ -375,7 +375,7 @@ if parts.waste then
   data.raw.recipe["fill-chemical-waste-barrel"].ib_corner = "left-bottom"
   data.raw.recipe["empty-chemical-waste-barrel"].ib_badge = "CW"
   data.raw.recipe["empty-chemical-waste-barrel"].ib_corner = "left-bottom"
-  if mods["ThemTharHills"] then
+  if mods["ThemTharHills-Updated"] then
     data.raw.item["depleted-acid-barrel"].ib_badge = "DA"
     data.raw.recipe["fill-depleted-acid-barrel"].ib_badge = "DA"
     data.raw.recipe["fill-depleted-acid-barrel"].ib_corner = "left-bottom"

@@ -149,7 +149,7 @@ if parts.waste then
             type = "unlock-recipe",
             recipe = "advanced-waste-treatment"
           },
-          mods["ThemTharHills"] and {
+          mods["ThemTharHills-Updated"] and {
             type = "unlock-recipe",
             recipe = "depleted-acid-treatment"
           } or nil

@@ -4,7 +4,7 @@ parts.waste = settings.startup["brimstuff-waste-treatment"].value
 parts.oil_tol = settings.startup["brimstuff-toluene-from-oil"].value
 parts.coke_tol = settings.startup["brimstuff-toluene-from-coke"].value
 
-if mods["ThemTharHills"] then
+if mods["ThemTharHills-Updated"] then
   parts.acidwaste = "depleted-acid"
 else
   parts.acidwaste = "chemical-waste"

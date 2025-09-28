@@ -22,7 +22,7 @@ end
 
 if mods["advanced-chemical-plant"] and not mods["Krastorio2"] then
   if not (mods["BrassTacks-Updated"] or mods["IfNickel-Updated"]) then
-    if not mods["ThemTharHills"] then
+    if not mods["ThemTharHills-Updated"] then
       rm.AddIngredient("kr-advanced-chemical-plant", "engine-unit", 8, 8) --galaxy brain
     end
     rm.AddIngredient("kr-advanced-chemical-plant", gasket, 32*gasket_cost, 32*gasket_cost)
@@ -50,12 +50,12 @@ if mods["Krastorio2"] then
     end
   end
 
-  if parts.waste and mods["ThemTharHills"] then
+  if parts.waste and mods["ThemTharHills-Updated"] then
     rm.AddProductRaw("empty-antimatter-fuel-cell", {type="fluid", name=parts.acidwaste, amount=50})
     rm.AddProductRaw("kr-advanced-solar-panel", {type="fluid", name=parts.acidwaste, amount=25})
   end
 
-  if not mods["ThemTharHills"] then
+  if not mods["ThemTharHills-Updated"] then
     tf.addRecipeUnlock("kr-advanced-chemistry", "ammonia-from-potassium-nitrate")
   end
 

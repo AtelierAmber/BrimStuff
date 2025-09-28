@@ -10,7 +10,7 @@ if parts.waste then
 
   if mods["bzchlorine"] then
     rm.AddProductRaw("hydrogen-chloride-salt", {type="fluid", name="chemical-waste", amount=10})
-    if mods["ThemTharHills"] then
+    if mods["ThemTharHills-Updated"] then
       rm.AddProductRaw("ferric-chloride-hcl", {type="fluid", name="depleted-acid", amount=15})
     else
       rm.AddProductRaw("ferric-chloride-hcl", {type="fluid", name="chemical-waste", amount=40})

@@ -83,7 +83,7 @@ if parts.waste then
       order = "ad"
     }
   })
-  if mods["ThemTharHills"] then
+  if mods["ThemTharHills-Updated"] then
     data:extend({
       {
         type = "fluid",

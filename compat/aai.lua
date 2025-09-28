@@ -44,11 +44,11 @@ if mods["space-exploration"] then
   rm.multiply("se-vitalic-acid", 4, true, true, true)
   rm.AddIngredient("se-vitalic-acid", "toluene", 1, 1)
 
-  if not (mods["Krastorio2"] or mods["ThemTharHills"]) then
+  if not (mods["Krastorio2"] or mods["ThemTharHills-Updated"]) then
     rm.ReplaceProportional("se-cryonite-ion-exchange-beads", "sulfuric-acid", "nitric-acid", 1)
   end
 
-  if not mods["ThemTharHills"] then
+  if not mods["ThemTharHills-Updated"] then
     rm.ReplaceIngredient("se-observation-frame-blank", "light-oil", "nitric-acid", 10, 10)
     rm.ReplaceIngredient("se-observation-frame-blank-beryllium", "light-oil", "nitric-acid", 10, 10)
   end

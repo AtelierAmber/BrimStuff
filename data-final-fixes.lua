@@ -87,7 +87,7 @@ if data.raw["item-subgroup"]["chemistry"] then
 end
 
 --TTH + K2 already adds saltpeter byproducts
-if not (mods["ThemTharHills"] and mods["Krastorio2"]) then
+if not (mods["ThemTharHills-Updated"] and mods["Krastorio2"]) then
   if mods["Krastorio2"] then
     rm.AddProductRaw("sand", {type="item", name="potassium-nitrate", amount=1, probability=0.15})
   end

@@ -541,7 +541,7 @@ if mods["bzgas"] then
   })
 end
 
-if mods["Krastorio2"] and not mods["ThemTharHills"] then
+if mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
   data:extend({
     {
       type = "recipe",
@@ -586,7 +586,7 @@ if mods["Krastorio2"] and not mods["ThemTharHills"] then
   })
 end
 
-if parts.waste and mods["ThemTharHills"] then
+if parts.waste and mods["ThemTharHills-Updated"] then
   data:extend({
     {
       type = "recipe",
