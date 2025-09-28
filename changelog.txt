@@ -1,0 +1,59 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.8
+  Bugfixes:
+    - (LL, !brass) Liquid rocket fuel no longer costs rubber or gaskets.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.7
+  Bugfixes:
+    - Plastic-with-toluene can use productivity modules. For real this time.
+    - Burner chemical plant will no longer buffer excessive fluid outputs.
+  Compatibility:
+    - Support for Lunar Landings added.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.6
+  Changes:
+    - Advanced Polymer Synthesis recipes can use productivity modules.
+  Bugfixes:
+    - Fixed potassium nitrate having a broken locale key.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.5
+  Bugfixes:
+    - Fixed startup error with Them Thar Hills when greenhouses are disabled.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.4
+  Changes:
+    - Renamed saltpeter to potassium nitrate for consistency across translations.
+  Compatibility:
+    - Add support for Icon Badges
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.3
+  Locale:
+    - Added Spanish locale by Rawkius
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.2
+  Features:
+    - Added advanced polymer synthesis technology, unlocking alternate recipes for rubber and plastic which use toluene to boost efficiency.
+  Changes:
+    - (Deadlock) Toluene can now be stacked and crated.
+    - Renamed tech folder to technology.
+  Locale:
+    - Added description to pollution nodule indicating it can be shipped by delivery cannon.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+  Changes:
+    - (TTH) Added depleted acid byproduct to new alternate integrated circuit recipe.
+    - Renamed items folder to icons, like every other mod.
+  Bugfixes:
+    - Fixed incorrect condition for adding toluene byproduct to phenol from oil recipe.
+
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+  Info:
+    - Initial release.

@@ -1,0 +1,10 @@
+{
+  "name": "BrimStuff",
+  "version": "1.0.8",
+  "title": "BrimStuff",
+  "author": "planetfall",
+  "homepage": "",
+  "description": "Adds minable sulfur, burner chemical plant, gunpowder and rubber. Changes how sulfur is obtained from oil. Optionally adds chemical waste reprocessing and greenhouses.",
+  "factorio_version": "1.1",
+  "dependencies": ["base >= 1.1", "? ThemTharHills", "? BrassTacks", "? IfNickel", "? bzgold", "? bzaluminum", "? bzcarbon", "? bztin", "? bzfoundry", "? bzzirconium", "? bzgas", "? space-exploration", "? aai-industry", "? aai-containers", "? aai-signal-transmission", "? deadlock-beltboxes-loaders", "? DeadlockCrating", "? vtk-deep-core-mining", "? Krastorio2", "? FluidMustFlow", "? Expensive_Fluid_Must_Flow_Recipes", "? Krastorio2", "? RenaiTransportation", "? cargo-ships", "? intermodal-containers", "? LunarLandings"]
+}
