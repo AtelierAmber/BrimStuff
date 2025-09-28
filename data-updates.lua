@@ -219,7 +219,7 @@ end
 --nickel means valves in chemical plants and such
 local gasket_item = "rubber"
 local gasket_ratio = 2
-if mods["BrassTacks"] then
+if mods["BrassTacks-Updated"] then
   gasket_item = "airtight-seal"
   gasket_ratio = 1
 else if mods["bzcarbon"] then
@@ -228,7 +228,7 @@ else if mods["bzcarbon"] then
   tf.addRecipeUnlock("rubber", "gasket")
 end end
 
-if not mods["BrassTacks"] then
+if not mods["BrassTacks-Updated"] then
   --airtight seal item does not exist, add gaskets or rubber as relevant
   rm.ReplaceIngredient("pump", "graphite", gasket_item, 2, 2)
   rm.RemoveIngredient("flamethrower-ammo", "steel-plate", 1, 1)
@@ -240,7 +240,7 @@ end
 
 if mods["IfNickel-Updated"] then
   tf.addPrereq("valves", "rubber")
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     if mods["bzcarbon"] then
       rm.ReplaceProportional("invar-valve", "graphite", gasket_item, gasket_ratio/2)
     else
@@ -314,7 +314,7 @@ if not mods["Krastorio2"] and not mods["ThemTharHills"] then
   rm.ReplaceIngredient("rocket-fuel", "light-oil", "nitric-acid", 10, 10)
 end
 
-if mods["BrassTacks"] and not mods["IfNickel-Updated"] then
+if mods["BrassTacks-Updated"] and not mods["IfNickel-Updated"] then
   tf.removeRecipeUnlock("fluid-handling", "airtight-seal")
   tf.addRecipeUnlock("rubber", "airtight-seal")
   tf.addPrereq("fluid-handling", "rubber")

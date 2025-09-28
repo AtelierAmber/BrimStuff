@@ -10,7 +10,7 @@ else
   parts.acidwaste = "chemical-waste"
 end
 
-parts.zinc = mods["BrassTacks"]
+parts.zinc = mods["BrassTacks-Updated"]
 parts.steelValve = mods["IfNickel-Updated"] and settings.startup["ifnickel-steel-valve"].value
 if parts.zinc then
   parts.brassExperiment = settings.startup["brasstacks-experimental-intermediates"].value

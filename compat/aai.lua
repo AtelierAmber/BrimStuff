@@ -5,7 +5,7 @@ local cu = require("category-utils")
 
 local gasket = "rubber"
 local gasket_cost = 2
-if mods["bzcarbon"] and not mods["BrassTacks"] then
+if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
   gasket = "gasket"
   gasket_cost = 1
 end
@@ -13,7 +13,7 @@ end
 local airseal = false
 local airseal_cost = 1
 if not mods["IfNickel-Updated"] then
-  if mods["BrassTacks"] then
+  if mods["BrassTacks-Updated"] then
     airseal = "airtight-seal"
   else
     airseal = gasket
@@ -76,7 +76,7 @@ if mods["space-exploration"] then
   rm.AddIngredient("se-tensile-strength-data", "drive-belt", 1, 1)
   rm.AddIngredient("se-compressive-strength-data", "rubber", 1, 1)
 
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     if not mods["IfNickel-Updated"] then
       rm.AddIngredient("se-canister", gasket, 1, 1)
     end

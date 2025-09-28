@@ -5,7 +5,7 @@ local cu = require("category-utils")
 
 local gasket_item = "rubber"
 local gasket_ratio = 2
-if mods["BrassTacks"] then
+if mods["BrassTacks-Updated"] then
   gasket_item = "airtight-seal"
   gasket_ratio = 1
 else if mods["bzcarbon"] then

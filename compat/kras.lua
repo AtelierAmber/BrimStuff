@@ -4,7 +4,7 @@ local parts = require("variable-parts")
 
 local gasket = "rubber"
 local gasket_cost = 2
-if mods["bzcarbon"] and not mods["BrassTacks"] then
+if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
   gasket = "gasket"
   gasket_cost = 1
 end
@@ -12,7 +12,7 @@ end
 local airseal = false
 local airseal_cost = 1
 if not mods["IfNickel-Updated"] then
-  if mods["BrassTacks"] then
+  if mods["BrassTacks-Updated"] then
     airseal = "airtight-seal"
   else
     airseal = gasket
@@ -21,7 +21,7 @@ if not mods["IfNickel-Updated"] then
 end
 
 if mods["advanced-chemical-plant"] and not mods["Krastorio2"] then
-  if not (mods["BrassTacks"] or mods["IfNickel-Updated"]) then
+  if not (mods["BrassTacks-Updated"] or mods["IfNickel-Updated"]) then
     if not mods["ThemTharHills"] then
       rm.AddIngredient("kr-advanced-chemical-plant", "engine-unit", 8, 8) --galaxy brain
     end
@@ -61,7 +61,7 @@ if mods["Krastorio2"] then
 
   rm.ReplaceIngredient("pollution-filter", "plastic-bar", "rubber", 1, 1)
 
-  if not mods["BrassTacks"] then
+  if not mods["BrassTacks-Updated"] then
     rm.AddIngredient("kr-steel-pump", gasket, 2*gasket_cost, 2*gasket_cost)
     rm.AddIngredient("rocket-fuel-with-ammonia", gasket, gasket_cost, gasket_cost)
     rm.AddIngredient("rocket-fuel-with-hydrogen-chloride", gasket, gasket_cost, gasket_cost)
@@ -86,7 +86,7 @@ if mods["FluidMustFlow"] then
   rm.AddIngredient("duct-underground", gasket, 2*gasket_cost, 2*gasket_cost)
   if not mods["IfNickel-Updated"] then
     rm.AddIngredient("non-return-duct", gasket, 2*gasket_cost, 2*gasket_cost)
-    if not mods["BrassTacks"] then
+    if not mods["BrassTacks-Updated"] then
       rm.AddIngredient("duct-end-point-intake", gasket, 6*gasket_cost, 6*gasket_cost)
       rm.AddIngredient("duct-end-point-outtake", gasket, 6*gasket_cost, 6*gasket_cost)
     end

@@ -145,7 +145,7 @@ if mods["bzgas"] then
   })
 end
 
-if mods["bzcarbon"] and not mods["BrassTacks"] then
+if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
   data:extend({
     {
       type = "item",
