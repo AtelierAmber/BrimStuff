@@ -27,8 +27,8 @@ script.on_configuration_changed(
 remote.add_interface("BrimStuff-Milestones", {
     milestones_preset_addons = function()
         return {
-            ["BrimStuff"] = {
-                required_mods = {"BrimStuff"},
+            ["BrimStuff-Updated"] = {
+                required_mods = {"BrimStuff-Updated"},
                 milestones = {
                     {type="group", name="Resources"},
                     {type="item",  name="rubber", quantity=1},
