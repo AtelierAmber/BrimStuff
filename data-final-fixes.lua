@@ -126,7 +126,7 @@ plastic2.icons = {
     icon_size = 64
   },
   {
-    icon = "__BrimStuff__/graphics/icons/toluene.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/toluene.png",
     icon_size = 64,
     scale = 0.25,
     shift = {-8, -8}

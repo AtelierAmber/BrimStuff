@@ -7,7 +7,7 @@ data:extend({
       name = "rubber",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/technology/rubber.png",
+          icon = "__BrimStuff-Updated__/graphics/technology/rubber.png",
           icon_size = 256
         }
        },
@@ -36,7 +36,7 @@ data:extend({
       name = "toluene-production",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/technology/toluene-production.png",
+          icon = "__BrimStuff-Updated__/graphics/technology/toluene-production.png",
           icon_size = 256
         }
        },
@@ -70,7 +70,7 @@ data:extend({
           icon_size = 256
         },
         {
-          icon = "__BrimStuff__/graphics/technology/toluene-production.png",
+          icon = "__BrimStuff-Updated__/graphics/technology/toluene-production.png",
           icon_size = 256,
           scale = 0.5,
           shift = {-64, -64}
@@ -108,7 +108,7 @@ if not mods["Krastorio2"] then
         name = "electric-chemical-plant",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/technology/electric-chemical-plant.png",
+            icon = "__BrimStuff-Updated__/graphics/technology/electric-chemical-plant.png",
             icon_size = 256
           }
          },
@@ -139,7 +139,7 @@ if parts.waste then
         name = "chemical-waste-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/technology/chemical-waste-disposal.png",
+            icon = "__BrimStuff-Updated__/graphics/technology/chemical-waste-disposal.png",
             icon_size = 256
           }
          },
@@ -169,7 +169,7 @@ if parts.waste then
         name = "byproduct-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/technology/byproduct-disposal.png",
+            icon = "__BrimStuff-Updated__/graphics/technology/byproduct-disposal.png",
             icon_size = 256
           }
          },
@@ -218,7 +218,7 @@ else
           name = "basic-chemistry",
           icons = {
             {
-              icon = "__BrimStuff__/graphics/technology/basic-chemistry.png",
+              icon = "__BrimStuff-Updated__/graphics/technology/basic-chemistry.png",
               icon_size = 256
             }
            },
@@ -268,7 +268,7 @@ if parts.waste and mods["space-exploration"] then
               icon_size = 128
             },
             {
-              icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+              icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
               icon_size = 64,
               scale = 1,
               shift = {-32, 32}
@@ -308,7 +308,7 @@ if parts.waste and mods["space-exploration"] then
               icon_size = 128
             },
             {
-              icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+              icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
               icon_size = 64,
               scale = 1,
               shift = {-32, 32}

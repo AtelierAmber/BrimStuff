@@ -53,7 +53,7 @@ data:extend({
     main_product = "toluene",
     icons = {
       {
-        icon = "__BrimStuff__/graphics/icons/toluene.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/toluene.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -83,7 +83,7 @@ data:extend({
     main_product = "toluene",
     icons = {
       {
-        icon = "__BrimStuff__/graphics/icons/toluene.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/toluene.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
@@ -158,11 +158,11 @@ data:extend({
     localised_name = {"recipe-name.synthetic-rubber"},
     icons = {
       {
-        icon = "__BrimStuff__/graphics/icons/rubber.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/rubber.png",
         icon_size = 64
       },
       {
-        icon = "__BrimStuff__/graphics/icons/toluene.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/toluene.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-8, -8}
@@ -180,12 +180,12 @@ data:extend({
     name = "nitric-acid-early",
     icons = {
       {
-        icon = mods["Krastorio2"] and "__Krastorio2Assets__/icons/fluids/nitric-acid.png" or "__BrimStuff__/graphics/icons/nitric-acid.png",
+        icon = mods["Krastorio2"] and "__Krastorio2Assets__/icons/fluids/nitric-acid.png" or "__BrimStuff-Updated__/graphics/icons/nitric-acid.png",
         icon_size = 64,
         icon_mipmaps = 4,
       },
       {
-        icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/potassium-nitrate.png",
         icon_size = 64,
         scale = 0.25,
         shift = {-8, -8}
@@ -229,7 +229,7 @@ if parts.waste then
       name = "basic-waste-treatment",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
           icon_size = 64,
         }
       },
@@ -255,7 +255,7 @@ if parts.waste then
       name = "advanced-waste-treatment",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
           icon_size = 64,
           icon_mipmaps = 4,
         },
@@ -292,11 +292,11 @@ if parts.waste then
         name = "potassium-nitrate-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
             icon_size = 64
           },
           {
-            icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/potassium-nitrate.png",
             icon_size = 64,
             scale = 0.25,
             shift = {-8, -8}
@@ -324,7 +324,7 @@ if parts.waste then
         name = "sulfur-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
             icon_size = 64
           },
           {
@@ -357,11 +357,11 @@ if parts.waste then
         name = "toluene-disposal",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
             icon_size = 64
           },
           {
-            icon = "__BrimStuff__/graphics/icons/toluene.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/toluene.png",
             icon_size = 64,
             icon_mipmaps = 4,
             scale = 0.25,
@@ -393,7 +393,7 @@ if parts.waste then
           name = "carbon-black-disposal",
           icons = {
             {
-              icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+              icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
               icon_size = 64
             },
             {
@@ -432,7 +432,7 @@ if parts.waste then
         name = "waste-treatment-water-recovery",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
@@ -466,7 +466,7 @@ if parts.waste then
         name = "astral-waste-treatment",
         icons = {
           {
-            icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+            icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
             icon_size = 64,
             icon_mipmaps = 4,
           },
@@ -553,7 +553,7 @@ if mods["Krastorio2"] and not mods["ThemTharHills"] then
           icon_mipmaps = 4,
         },
         {
-          icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/potassium-nitrate.png",
           icon_size = 64,
           shift = {-8, -8},
           scale = 0.25
@@ -593,7 +593,7 @@ if parts.waste and mods["ThemTharHills"] then
       name = "depleted-acid-treatment",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/depleted-acid.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/depleted-acid.png",
           icon_size = 64,
           icon_mipmaps = 4,
         }
@@ -624,7 +624,7 @@ if parts.waste and mods["space-exploration"] then
       name = "cryo-waste-compression",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
           icon_size = 64
         },
         {
@@ -655,12 +655,12 @@ if parts.waste and mods["space-exploration"] then
       name = "cryo-waste-expansion",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
           icon_size = 64,
           icon_mipmaps = 4,
         },
         {
-          icon = "__BrimStuff__/graphics/icons/pollution-nodule.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/pollution-nodule.png",
           icon_size = 64,
           scale = 0.25,
           shift = {-8, -8}
@@ -695,7 +695,7 @@ if parts.waste and mods["space-exploration"] then
           shift = {-8, 8}
         },
         {
-          icon = "__BrimStuff__/graphics/icons/pollution-nodule.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/pollution-nodule.png",
           icon_size = 64,
           scale = 0.33,
           shift = {8, -8}
@@ -720,7 +720,7 @@ if parts.waste and mods["space-exploration"] then
       name = "pyro-waste-treatment",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
           icon_size = 64
         },
         {
@@ -757,7 +757,7 @@ if parts.waste and mods["space-exploration"] then
           icon_mipmaps = 4
         },
         {
-          icon = "__BrimStuff__/graphics/icons/pollution-nodule.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/pollution-nodule.png",
           icon_size = 64,
           scale = 0.25,
           shift = {-8, -8}

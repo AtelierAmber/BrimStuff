@@ -9,7 +9,7 @@ data:extend({
   {
     type = "item",
     name = "rubber",
-    icon = "__BrimStuff__/graphics/icons/rubber.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/rubber.png",
     icon_size = 64,
     subgroup = parts.green and "brimstuff-botany" or "raw-material",
     order = "gc",
@@ -18,7 +18,7 @@ data:extend({
   {
     type = "item",
     name = "potassium-nitrate",
-    icon = "__BrimStuff__/graphics/icons/potassium-nitrate.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/potassium-nitrate.png",
     icon_size = 64,
     subgroup = "raw-material",
     order = "ga",
@@ -28,7 +28,7 @@ data:extend({
   {
     type = "item",
     name = "gunpowder",
-    icon = "__BrimStuff__/graphics/icons/gunpowder.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/gunpowder.png",
     icon_size = 64,
     subgroup = mods["space-exploration"] and "chemical" or "raw-material",
     order = "gb",
@@ -37,7 +37,7 @@ data:extend({
   {
     type = "item",
     name = "toluene",
-    icon = "__BrimStuff__/graphics/icons/toluene.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/toluene.png",
     icon_size = 64,
     subgroup = "raw-material",
     order = "gc",
@@ -48,7 +48,7 @@ data:extend({
   {
     type = "item",
     name = "drive-belt",
-    icon = "__BrimStuff__/graphics/icons/drive-belt.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/drive-belt.png",
     icon_size = 64,
     subgroup = "intermediate-product",
     order = "gc",
@@ -67,7 +67,7 @@ if parts.waste then
     {
       type = "fluid",
       name = "chemical-waste",
-      icon = "__BrimStuff__/graphics/icons/chemical-waste.png",
+      icon = "__BrimStuff-Updated__/graphics/icons/chemical-waste.png",
       icon_size = 64,
       subgroup = "fluid",
       order = "h",
@@ -88,7 +88,7 @@ if parts.waste then
       {
         type = "fluid",
         name = "depleted-acid",
-        icon = "__BrimStuff__/graphics/icons/depleted-acid.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/depleted-acid.png",
         icon_size = 64,
         subgroup = "fluid",
         order = "i",
@@ -104,7 +104,7 @@ if parts.waste then
       {
         type = "item",
         name = "pollution-nodule",
-        icon = "__BrimStuff__/graphics/icons/pollution-nodule.png",
+        icon = "__BrimStuff-Updated__/graphics/icons/pollution-nodule.png",
         icon_size = 64,
         subgroup = "waste-treatment",
         order = "k",
@@ -119,7 +119,7 @@ if not mods["Krastorio2"] then
   {
     type = "fluid",
     name = "nitric-acid",
-    icon = "__BrimStuff__/graphics/icons/nitric-acid.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/nitric-acid.png",
     icon_size = 64,
     subgroup = "fluid",
     order = "g",
@@ -136,7 +136,7 @@ if mods["bzgas"] then
     {
       type = "item",
       name = "tnt",
-      icon = "__BrimStuff__/graphics/icons/tnt.png",
+      icon = "__BrimStuff-Updated__/graphics/icons/tnt.png",
       icon_size = 64,
       subgroup = mods["space-exploration"] and "chemical" or "raw-material",
       order = "ii",
@@ -150,7 +150,7 @@ if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
     {
       type = "item",
       name = "gasket",
-      icon = "__BrimStuff__/graphics/icons/gasket.png",
+      icon = "__BrimStuff-Updated__/graphics/icons/gasket.png",
       icon_size = 64,
       order = "d",
       subgroup = "intermediate-product",

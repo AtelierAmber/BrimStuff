@@ -1,8 +1,8 @@
 if deadlock then
-  deadlock.add_stack("potassium-nitrate", "__BrimStuff__/graphics/icons/stacking/potassium-nitrate-stacked.png", "deadlock-stacking-1", 64)
-  deadlock.add_stack("rubber", "__BrimStuff__/graphics/icons/stacking/rubber-stacked.png", "deadlock-stacking-1", 64)
-  deadlock.add_stack("gunpowder", "__BrimStuff__/graphics/icons/stacking/gunpowder-stacked.png", "deadlock-stacking-2", 64)
-  deadlock.add_stack("toluene", "__BrimStuff__/graphics/icons/stacking/toluene-stacked.png", "deadlock-stacking-2", 64)
+  deadlock.add_stack("potassium-nitrate", "__BrimStuff-Updated__/graphics/icons/stacking/potassium-nitrate-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("rubber", "__BrimStuff-Updated__/graphics/icons/stacking/rubber-stacked.png", "deadlock-stacking-1", 64)
+  deadlock.add_stack("gunpowder", "__BrimStuff-Updated__/graphics/icons/stacking/gunpowder-stacked.png", "deadlock-stacking-2", 64)
+  deadlock.add_stack("toluene", "__BrimStuff-Updated__/graphics/icons/stacking/toluene-stacked.png", "deadlock-stacking-2", 64)
   data.raw.item["deadlock-stack-potassium-nitrate"].ib_badge = "KN"
 end
 

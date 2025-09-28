@@ -9,7 +9,7 @@ local gh = util.table.deepcopy(data.raw["assembling-machine"]["assembling-machin
 
 gh.name = "brimstuff-greenhouse"
 gh.order = "ca"
-gh.icon = "__BrimStuff__/graphics/icons/brimstuff-greenhouse.png"
+gh.icon = "__BrimStuff-Updated__/graphics/icons/brimstuff-greenhouse.png"
 gh.icon_size = 64
 gh.icon_mipmaps = 4
 gh.remnants = "lab_remnants"
@@ -44,7 +44,7 @@ gh.animation = {
       layers =
       {
         {
-          filename = "__BrimStuff__/graphics/entity/greenhouse.png",
+          filename = "__BrimStuff-Updated__/graphics/entity/greenhouse.png",
           width = 98,
           height = 87,
           frame_count = 33,
@@ -53,7 +53,7 @@ gh.animation = {
           shift = util.by_pixel(0, 1.5),
           hr_version =
           {
-            filename = "__BrimStuff__/graphics/entity/hr-greenhouse.png",
+            filename = "__BrimStuff-Updated__/graphics/entity/hr-greenhouse.png",
             width = 194,
             height = 174,
             frame_count = 33,
@@ -86,7 +86,7 @@ gh.animation = {
           }
         },
         {
-          filename = "__BrimStuff__/graphics/entity/greenhouse-light.png",
+          filename = "__BrimStuff-Updated__/graphics/entity/greenhouse-light.png",
           blend_mode = "additive",
           draw_as_light = true,
           width = 106,
@@ -97,7 +97,7 @@ gh.animation = {
           shift = util.by_pixel(-1, 1),
           hr_version =
           {
-            filename = "__BrimStuff__/graphics/entity/hr-greenhouse-light.png",
+            filename = "__BrimStuff-Updated__/graphics/entity/hr-greenhouse-light.png",
             blend_mode = "additive",
             draw_as_light = true,
             width = 216,
@@ -182,7 +182,7 @@ data:extend({
   {
     type = "fluid",
     name = "fertilizer-slurry",
-    icon = "__BrimStuff__/graphics/icons/fertilizer-slurry.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/fertilizer-slurry.png",
     icon_size = 64,
     subgroup = "fluid",
     order = "q",
@@ -194,7 +194,7 @@ data:extend({
   {
     type = "item",
     name = "brimstuff-greenhouse",
-    icon = "__BrimStuff__/graphics/icons/brimstuff-greenhouse.png",
+    icon = "__BrimStuff-Updated__/graphics/icons/brimstuff-greenhouse.png",
     icon_size = 64,
     icon_mipmaps = 4,
     subgroup = "production-machine",
@@ -251,7 +251,7 @@ data:extend({
       name = "brimstuff-greenhouse",
       icons = {
         {
-          icon = "__BrimStuff__/graphics/icons/brimstuff-greenhouse.png",
+          icon = "__BrimStuff-Updated__/graphics/icons/brimstuff-greenhouse.png",
           icon_size = 64,
           icon_mipmaps = 4
         }
