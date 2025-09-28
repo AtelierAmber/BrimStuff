@@ -27,14 +27,14 @@ end
 function parts.preferred(ingredients, quantities)
   for k, v in ipairs(ingredients) do
     if data.raw.item[v] then
-      return {v, quantities[k]}
+      return {type="item", name=v, amount=quantities[k]}
     end
   end
 end
 
 function parts.optionalIngredient(item, amount)
   if data.raw.item[item] then
-    return {item, amount}
+    return {type="item", name=item, amount=amount}
   end
 end
 
