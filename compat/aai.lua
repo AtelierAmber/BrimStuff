@@ -12,7 +12,7 @@ end
 
 local airseal = false
 local airseal_cost = 1
-if not mods["IfNickel"] then
+if not mods["IfNickel-Updated"] then
   if mods["BrassTacks"] then
     airseal = "airtight-seal"
   else
@@ -77,7 +77,7 @@ if mods["space-exploration"] then
   rm.AddIngredient("se-compressive-strength-data", "rubber", 1, 1)
 
   if not mods["BrassTacks"] then
-    if not mods["IfNickel"] then
+    if not mods["IfNickel-Updated"] then
       rm.AddIngredient("se-canister", gasket, 1, 1)
     end
     rm.AddIngredient("se-space-pipe", gasket, 1, 1)

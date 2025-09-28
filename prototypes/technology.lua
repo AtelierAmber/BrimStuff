@@ -119,7 +119,7 @@ if not mods["Krastorio2"] then
             recipe = "chemical-plant"
           }
         },
-        prerequisites = {mods["IfNickel"] and "valves" or "rubber", data.raw.item["hardened-hull"] and "hardened-hull" or "steel-processing", not data.raw.item["hardened-hull"] and "logistic-science-pack" or nil, mods["bztungsten"] and "tungsten-processing" or nil},
+        prerequisites = {mods["IfNickel-Updated"] and "valves" or "rubber", data.raw.item["hardened-hull"] and "hardened-hull" or "steel-processing", not data.raw.item["hardened-hull"] and "logistic-science-pack" or nil, mods["bztungsten"] and "tungsten-processing" or nil},
         unit = {
           count = 50,
           ingredients = {

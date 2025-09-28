@@ -11,7 +11,7 @@ else
 end
 
 parts.zinc = mods["BrassTacks"]
-parts.steelValve = mods["IfNickel"] and settings.startup["ifnickel-steel-valve"].value
+parts.steelValve = mods["IfNickel-Updated"] and settings.startup["ifnickel-steel-valve"].value
 if parts.zinc then
   parts.brassExperiment = settings.startup["brasstacks-experimental-intermediates"].value
 else

@@ -11,7 +11,7 @@ end
 
 local airseal = false
 local airseal_cost = 1
-if not mods["IfNickel"] then
+if not mods["IfNickel-Updated"] then
   if mods["BrassTacks"] then
     airseal = "airtight-seal"
   else
@@ -21,7 +21,7 @@ if not mods["IfNickel"] then
 end
 
 if mods["advanced-chemical-plant"] and not mods["Krastorio2"] then
-  if not (mods["BrassTacks"] or mods["IfNickel"]) then
+  if not (mods["BrassTacks"] or mods["IfNickel-Updated"]) then
     if not mods["ThemTharHills"] then
       rm.AddIngredient("kr-advanced-chemical-plant", "engine-unit", 8, 8) --galaxy brain
     end
@@ -67,7 +67,7 @@ if mods["Krastorio2"] then
     rm.AddIngredient("rocket-fuel-with-hydrogen-chloride", gasket, gasket_cost, gasket_cost)
   end
 
-  if not mods["IfNickel"] then
+  if not mods["IfNickel-Updated"] then
     rm.AddIngredient("kr-electrolysis-plant", airseal, 5*airseal_cost, 5*airseal_cost)
     rm.AddIngredient("kr-filtration-plant", airseal, 5*airseal_cost, 5*airseal_cost)
     rm.AddIngredient("kr-atmospheric-condenser", airseal, 5*airseal_cost, 5*airseal_cost)
@@ -84,7 +84,7 @@ if mods["FluidMustFlow"] then
   rm.AddIngredient("duct-curve", gasket, 2*gasket_cost, 2*gasket_cost)
   rm.AddIngredient("duct-cross", gasket, 4*gasket_cost, 4*gasket_cost)
   rm.AddIngredient("duct-underground", gasket, 2*gasket_cost, 2*gasket_cost)
-  if not mods["IfNickel"] then
+  if not mods["IfNickel-Updated"] then
     rm.AddIngredient("non-return-duct", gasket, 2*gasket_cost, 2*gasket_cost)
     if not mods["BrassTacks"] then
       rm.AddIngredient("duct-end-point-intake", gasket, 6*gasket_cost, 6*gasket_cost)

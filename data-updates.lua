@@ -238,7 +238,7 @@ if not mods["BrassTacks"] then
   end
 end
 
-if mods["IfNickel"] then
+if mods["IfNickel-Updated"] then
   tf.addPrereq("valves", "rubber")
   if not mods["BrassTacks"] then
     if mods["bzcarbon"] then
@@ -314,7 +314,7 @@ if not mods["Krastorio2"] and not mods["ThemTharHills"] then
   rm.ReplaceIngredient("rocket-fuel", "light-oil", "nitric-acid", 10, 10)
 end
 
-if mods["BrassTacks"] and not mods["IfNickel"] then
+if mods["BrassTacks"] and not mods["IfNickel-Updated"] then
   tf.removeRecipeUnlock("fluid-handling", "airtight-seal")
   tf.addRecipeUnlock("rubber", "airtight-seal")
   tf.addPrereq("fluid-handling", "rubber")

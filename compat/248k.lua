@@ -14,7 +14,7 @@ else if mods["bzcarbon"] then
 end end
 
 if mods["248k"] then
-  if not mods["IfNickel"] then
+  if not mods["IfNickel-Updated"] then
     rm.AddIngredient("fu_burner_recipe", gasket_item, 5 * gasket_ratio, 5 * gasket_ratio)
     rm.ReplaceProportional("el_grower_recipe", "iron-gear-wheel", gasket_item, gasket_ratio)
     rm.AddIngredient("el_burner_kerosene_recipe", gasket_item, 5 * gasket_ratio, 5 * gasket_ratio)
