@@ -210,4 +210,10 @@ function recipemod.multiply(recipe, factor, cost, output, time)
   end
 end
 
+function recipemod.SetCategory(recipe, category)
+  if data.raw.recipe[recipe] then
+      data.raw.recipe[recipe].category = category
+  end
+end
+
 return recipemod
