@@ -158,6 +158,7 @@ bcp.graphics_set.working_visualisations[6] = {
 table.remove(bcp.graphics_set.working_visualisations, 3)
 
 bcp.crafting_speed = 0.5
+bcp.module_slots = nil
 bcp.allowed_effects = nil
 bcp.energy_source =
     {
