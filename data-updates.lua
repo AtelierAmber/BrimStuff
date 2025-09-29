@@ -210,7 +210,7 @@ end
 
 if not mods["Krastorio2"] then
   tf.removeRecipeUnlock("oil-processing", "chemical-plant")
-  tf.removeRecipeUnlock("fluid-handling", "chemical-plant") --bzchlorine
+  tf.removeRecipeUnlock(mods["aai-industry"] and "basic-fluid-handling" or "fluid-handling", "chemical-plant") --bzchlorine
   tf.addPrereq("oil-processing", "electric-chemical-plant")
 end
 
@@ -313,7 +313,7 @@ if not mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
 end
 
 if mods["BrassTacks-Updated"] and not mods["IfNickel-Updated"] then
-  tf.removeRecipeUnlock("fluid-handling", "airtight-seal")
+  tf.removeRecipeUnlock(mods["aai-industry"] and "basic-fluid-handling" or "fluid-handling", "airtight-seal")
   tf.addRecipeUnlock("rubber", "airtight-seal")
   tf.addPrereq("fluid-handling", "rubber")
 end
