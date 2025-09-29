@@ -118,7 +118,7 @@ data:extend({
     category = "crafting",
     energy_required = 2,
     ingredients = {{type="item", name="rubber", amount=3}, {type="item", name="iron-gear-wheel", amount=2}, parts.preferred({"bronze-plate", "iron-stick"}, {1, 1})},
-    result = "drive-belt",
+    results = {{type="item", name="drive-belt", amount=1}},
     enabled = false,
   },
   {
@@ -191,7 +191,7 @@ if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
       category = "advanced-crafting",
       energy_required = 0.5,
       ingredients = {{type="item", name="rubber", amount=1}, {type="item", name="graphite", amount=1}},
-      result = "gasket",
+      results = {{type="item", name="gasket", amount=1}},
       enabled = false
     }
   })

@@ -211,7 +211,7 @@ data:extend({
     category = "crafting",
     subgroup = "production-machine",
     energy_required = 1,
-    result = "brimstuff-greenhouse",
+    results = {{type="item", name="brimstuff-greenhouse", amount=1}},
     enabled = false,
     ingredients = {{type="item", name="iron-stick", amount=16}, {type="item", name="pipe", amount=5}, {type="item", name="stone-brick", amount=5}, 
       parts.optionalIngredient("glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
@@ -229,7 +229,7 @@ data:extend({
     subgroup = "brimstuff-botany",
     order = "a",
     energy_required = 2,
-    result = "wood",
+    results = {{type="item", name="wood", amount=1}},
     enabled = false,
     ingredients = {{type="fluid", name="fertilizer-slurry", amount=5}},
   },

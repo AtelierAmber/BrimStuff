@@ -195,7 +195,7 @@ data:extend({
     name = "basic-chemical-plant",
     category = "crafting",
     energy_required = 1,
-    result = "basic-chemical-plant",
+    results = {{type="item", name="basic-chemical-plant", amount=1}},
     enabled = false,
     ingredients = {parts.preferred({"silver-plate", "aluminum-plate", "iron-plate"}, {5, 5, 5}), {type="item", name="iron-gear-wheel", amount=5}, {type="item", name="pipe", amount=5}}
   }
