@@ -1,5 +1,6 @@
 local util = require("util")
 local parts = require("variable-parts")
+local tf = require("techfuncs")
 
 if not settings.startup["brimstuff-greenhouse"].value then
   return
@@ -171,7 +172,7 @@ gh.energy_source =
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = {pollution = -2, spores = 2}
+      emissions_per_minute = {pollution = -2}
     }
 gh.energy_usage = "30kW"
 
@@ -213,8 +214,8 @@ data:extend({
     energy_required = 1,
     results = {{type="item", name="brimstuff-greenhouse", amount=1}},
     enabled = false,
-    ingredients = {{type="item", name="iron-stick", amount=16}, {type="item", name="pipe", amount=5}, {type="item", name="stone-brick", amount=5}, 
-      parts.optionalIngredient("glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
+    ingredients = tf.compilePrereqs{{type="item", name="iron-stick", amount=16}, {type="item", name="pipe", amount=5}, {type="item", name="stone-brick", amount=5}, 
+      parts.optionalIngredient("kr-glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
   },
   {
     type = "item-subgroup",

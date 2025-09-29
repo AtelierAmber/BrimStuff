@@ -50,7 +50,7 @@ if mods["space-exploration"] then
 end
 
 if mods["Krastorio2"] then
-  rm.ReplaceIngredient("chemical-science-pack", "glass", "explosives", 10)
+  rm.ReplaceIngredient("chemical-science-pack", "kr-glass", "explosives", 10)
   table.insert(data.raw["assembling-machine"]["kr-advanced-chemical-plant"]["crafting_categories"], "basic-chemistry")
 end
 
