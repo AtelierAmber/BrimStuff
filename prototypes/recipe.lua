@@ -541,7 +541,7 @@ if mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
       enabled = false,
       energy_required = 2,
       ingredients = {{type="fluid", name="water", amount=20}, {type="item", name="potassium-nitrate", amount=1}},
-      results = {{type="fluid", name="ammonia", amount=20}},
+      results = {{type="fluid", name="kr-ammonia", amount=20}},
       crafting_machine_tint = {
         primary = {0.5, 0.5, 1, 1},
         secondary = {1, 1, 1, 1},
