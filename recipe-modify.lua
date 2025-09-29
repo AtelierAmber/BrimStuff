@@ -81,9 +81,12 @@ end
 
 function recipemod.AddProductRaw(recipename, product)
   local rec = data.raw.recipe[recipename]
-  if rec then
+  if rec and product then
     if rec.results and product then
       table.insert(rec.results, product)
+      if not rec.main_product then
+        rec.main_product = rec.results[1].name
+      end
     else
       rec.results = {product}
     end
