@@ -2,7 +2,7 @@ local parts = require("variable-parts")
 
 local stacksize_override = nil
 if mods["Krastorio2"] then
-  stacksize_override = tonumber(settings.startup["kr-stack-size"].value)
+  --stacksize_override = tonumber(settings.startup["kr-stack-size"].value)
 end
 
 data:extend({
