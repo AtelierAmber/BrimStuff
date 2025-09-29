@@ -21,7 +21,7 @@ gh.fluid_boxes = {
     pipe_covers = pipecoverspictures(),
     base_area = 10,
     base_level = -1,
-    pipe_connections = {{ type="input", position = {0, -2} }},
+    pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1.2} }},
     secondary_draw_orders = { north = -1 },
     volume = 1000,
   },
@@ -31,7 +31,7 @@ gh.fluid_boxes = {
     pipe_covers = pipecoverspictures(),
     base_area = 1,
     base_level = 1,
-    pipe_connections = {{ type="output", position = {0, 2} }},
+    pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1.2} }},
     secondary_draw_orders = { north = -1 },
     volume = 1000,
   }
@@ -242,7 +242,7 @@ data:extend({
     energy_required = 1,
     results = {{type="fluid", name="fertilizer-slurry", amount=100}},
     enabled = false,
-    ingredients = {{type="fluid", name="nitric-acid", amount=25}, {type="item", name="wood", amount=1}, {type="item", name="potassium-nitrate", amount=1}},
+    ingredients = {{type="fluid", name=mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", amount=25}, {type="item", name="wood", amount=1}, {type="item", name="potassium-nitrate", amount=1}},
     crafting_machine_tint = {
       primary = {0, 0.6, 0.2, 1},
       secondary = {0, 1, 0, 1},
