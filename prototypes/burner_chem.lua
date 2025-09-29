@@ -100,15 +100,15 @@ bcp.graphics_set = {
 
 bcp.graphics_set.working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set.working_visualisations)
 --lua y u no have plus equals
-bcp.graphics_set.working_visualisations[1].animation.shift[1] = bcp.working_visualisations[1].animation.shift[1] - 1/16
-bcp.graphics_set.working_visualisations[1].animation.shift[2] = bcp.working_visualisations[1].animation.shift[2] - 1/4
+bcp.graphics_set.working_visualisations[1].animation.shift[1] = bcp.graphics_set.working_visualisations[1].animation.shift[1] - 1/16
+bcp.graphics_set.working_visualisations[1].animation.shift[2] = bcp.graphics_set.working_visualisations[1].animation.shift[2] - 1/4
 bcp.graphics_set.working_visualisations[1].animation.animation_speed = 2
 
-bcp.graphics_set.working_visualisations[2].animation.shift[1] = bcp.working_visualisations[2].animation.shift[1] - 1/16
-bcp.graphics_set.working_visualisations[2].animation.shift[2] = bcp.working_visualisations[2].animation.shift[2] - 1/4
+bcp.graphics_set.working_visualisations[2].animation.shift[1] = bcp.graphics_set.working_visualisations[2].animation.shift[1] - 1/16
+bcp.graphics_set.working_visualisations[2].animation.shift[2] = bcp.graphics_set.working_visualisations[2].animation.shift[2] - 1/4
 
-bcp.graphics_set.working_visualisations[4].animation.shift[1] = bcp.working_visualisations[4].animation.shift[1] - 1/16
-bcp.graphics_set.working_visualisations[4].animation.shift[2] = bcp.working_visualisations[4].animation.shift[2] - 1/4
+bcp.graphics_set.working_visualisations[4].animation.shift[1] = bcp.graphics_set.working_visualisations[4].animation.shift[1] - 1/16
+bcp.graphics_set.working_visualisations[4].animation.shift[2] = bcp.graphics_set.working_visualisations[4].animation.shift[2] - 1/4
 
 bcp.graphics_set.working_visualisations[5] = {
       apply_recipe_tint = "tertiary",
@@ -127,7 +127,7 @@ bcp.graphics_set.working_visualisations[5] = {
       }
     }
 
-bcp.working_visualisations[6] = {
+bcp.graphics_set.working_visualisations[6] = {
         apply_recipe_tint = "quaternary",
         fadeout = true,
         constant_speed = true,
