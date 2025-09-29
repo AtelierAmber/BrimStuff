@@ -13,12 +13,12 @@ if mods["cargo-ships"] then
 end
 
 if mods["IntermodalContainers"] then
-  rm.AddIngredient("ic-containerization-machine-2", "drive-belt", 5, 5)
+  rm.AddIngredient("ic-containerization-machine-2", "drive-belt", 5)
 end
 
 if mods["FreightForwarding"] then
   if parts.waste then
     rm.AddProductRaw("ff-slag-leaching", {type="fluid", name=parts.acidwaste, amount=10})
   end
-  rm.ReplaceIngredient("piercing-rounds-magazine", "lead-plate", "gunpowder", 1, 1)
+  rm.ReplaceIngredient("piercing-rounds-magazine", "lead-plate", "gunpowder", 1)
 end

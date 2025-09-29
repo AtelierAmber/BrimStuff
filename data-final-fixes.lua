@@ -32,13 +32,6 @@ local allowed_recipes = {
   "astral-waste-treatment",
   "brimstuff-oxygen"
 }
---Get a reference to all prodmods to avoid doing these checks for each recipe
-prodmods = {}
-for k, v in pairs(data.raw.module) do
-  if v.effect and v.effect["productivity"] and v.limitation then
-    table.insert(prodmods, v)
-  end
-end
 
 --wait until plastic-with-toluene is defined to add recipes to prodmods.
 
@@ -57,7 +50,7 @@ if mods["space-exploration"] then
 end
 
 if mods["Krastorio2"] then
-  rm.ReplaceIngredient("chemical-science-pack", "glass", "explosives", 10, 10)
+  rm.ReplaceIngredient("chemical-science-pack", "glass", "explosives", 10)
   table.insert(data.raw["assembling-machine"]["kr-advanced-chemical-plant"]["crafting_categories"], "basic-chemistry")
 end
 
@@ -106,13 +99,13 @@ end
 
 if data.raw.item["ptpd-catalyst"] then
   if parts.waste then
-    rm.ReplaceIngredient("catalyzed-solid-fuel-from-petroleum-gas", "petroleum-gas", "chemical-waste", 15, 15)
-    rm.RemoveIngredient("catalyzed-solid-fuel-from-petroleum-gas", "petroleum-gas", 5, 5)
+    rm.ReplaceIngredient("catalyzed-solid-fuel-from-petroleum-gas", "petroleum-gas", "chemical-waste", 15)
+    rm.RemoveIngredient("catalyzed-solid-fuel-from-petroleum-gas", "petroleum-gas", 5)
   else
-    rm.RemoveIngredient("catalyzed-solid-fuel-from-petroleum-gas", "petroleum-gas", 20, 20)
+    rm.RemoveIngredient("catalyzed-solid-fuel-from-petroleum-gas", "petroleum-gas", 20)
   end
-  rm.RemoveIngredient("catalyzed-solid-fuel-from-light-oil", "light-oil", 10, 10)
-  rm.RemoveIngredient("catalyzed-solid-fuel-from-heavy-oil", "heavy-oil", 20, 20)
+  rm.RemoveIngredient("catalyzed-solid-fuel-from-light-oil", "light-oil", 10)
+  rm.RemoveIngredient("catalyzed-solid-fuel-from-heavy-oil", "heavy-oil", 20)
 end
 
 --I am breaking all my own rules by defining a new recipe here.
@@ -135,7 +128,7 @@ plastic2.icons = {
 data:extend({plastic2})
 rm.multiply("plastic-with-toluene", 2, true, true, true)
 if rm.CheckIngredient("plastic-with-toluene", "phenol") then
-  rm.ReplaceIngredient("plastic-with-toluene", "phenol", "toluene", 1, 1)
+  rm.ReplaceIngredient("plastic-with-toluene", "phenol", "toluene", 1)
   --I should make a non-stupid way to add to existing products other than removing a negative amount
   --phenol is arguably more annoying to produce than toluene, so replacing one unit of it is the main benefit.
   --still, this is many ingredients into a high-throughput recipe, so you should be rewarded for a good design.
@@ -143,12 +136,12 @@ if rm.CheckIngredient("plastic-with-toluene", "phenol") then
   rm.RemoveProduct("plastic-with-toluene", "chemical-waste", -10)
 else
   if mods["Krastorio2"] then
-    rm.ReplaceIngredient("plastic-with-toluene", "coal", "toluene", 2, 2)
-    rm.RemoveIngredient("plastic-with-toluene", "carbon-black", 2, 2)
+    rm.ReplaceIngredient("plastic-with-toluene", "coal", "toluene", 2)
+    rm.RemoveIngredient("plastic-with-toluene", "carbon-black", 2)
     rm.RemoveProduct("plastic-with-toluene", "plastic-bar", -2)
   else
-    rm.ReplaceIngredient("plastic-with-toluene", "coal", "toluene", 1, 1)
-    rm.RemoveIngredient("plastic-with-toluene", "carbon-black", 1, 1)
+    rm.ReplaceIngredient("plastic-with-toluene", "coal", "toluene", 1)
+    rm.RemoveIngredient("plastic-with-toluene", "carbon-black", 1)
     rm.RemoveProduct("plastic-with-toluene", "plastic-bar", -1)
   end
   rm.RemoveProduct("plastic-with-toluene", "chemical-waste", -10)
@@ -156,46 +149,46 @@ end
 
 for k, v in pairs(allowed_recipes) do
   if data.raw.recipe[v] then
-    for j, i in pairs(prodmods) do
-      table.insert(i.limitation, v)
-    end
+    local va = data.raw.recipe[v].allowed_module_categories or {}
+    table.insert(va, "productivity")
+    data.raw.recipe[v].allowed_module_categories = va
   end
 end
 
 if mods["Krastorio2"] and parts.waste and settings.startup["brimstuff-krastorio-filter-hell"].value then
-  rm.RemoveProduct("dirty-water-filtration-1", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-1", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-1", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-2", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-2", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-2", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-3", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-3", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-3", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-graphite", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-graphite", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-graphite", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-titanium", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-titanium", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-titanium", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-lead", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-lead", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-lead", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-tungsten", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-tungsten", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-tungsten", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-zircon", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-zircon", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-zircon", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-aluminum", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-aluminum", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-aluminum", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-tin", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-tin", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-tin", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-zinc", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-zinc", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-zinc", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-nickel", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-nickel", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-nickel", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-gold", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-gold", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-gold", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("dirty-water-filtration-silver", "water", 99999, 99999)
+  rm.RemoveProduct("dirty-water-filtration-silver", "water", 99999)
   rm.AddProductRaw("dirty-water-filtration-silver", {type="fluid", name="chemical-waste", amount=20})
-  rm.RemoveProduct("se-dirty-water-filtration-holmium", "water", 99999, 99999)
+  rm.RemoveProduct("se-dirty-water-filtration-holmium", "water", 99999)
   rm.AddProductRaw("se-dirty-water-filtration-holmium", {type="fluid", name="chemical-waste", amount=50})
-  rm.RemoveProduct("se-dirty-water-filtration-iridium", "water", 99999, 99999)
+  rm.RemoveProduct("se-dirty-water-filtration-iridium", "water", 99999)
   rm.AddProductRaw("se-dirty-water-filtration-iridium", {type="fluid", name="chemical-waste", amount=50})
-  rm.RemoveProduct("coal-filtration", "water", 99999, 99999)
+  rm.RemoveProduct("coal-filtration", "water", 99999)
   rm.AddProductRaw("coal-filtration", {type="fluid", name="chemical-waste", amount=40})
 end
 
@@ -227,35 +220,35 @@ for k, v in pairs(ammo_recipes) do
       rm.ReplaceProportional(recipename, "coal", "gunpowder", 1)
     else
       if rm.CheckIngredient(recipename, "lead-plate") then
-        rm.RemoveIngredient(recipename, "lead-plate", 1, 1)
-        rm.AddIngredient(recipename, "gunpowder", gunpowdercost, gunpowdercost)
+        rm.RemoveIngredient(recipename, "lead-plate", 1)
+        rm.AddIngredient(recipename, "gunpowder", gunpowdercost)
       else if rm.CheckIngredient(recipename, "copper-plate") then
-        rm.RemoveIngredient(recipename, "copper-plate", 1, 1)
-        rm.AddIngredient(recipename, "gunpowder", gunpowdercost, gunpowdercost)
+        rm.RemoveIngredient(recipename, "copper-plate", 1)
+        rm.AddIngredient(recipename, "gunpowder", gunpowdercost)
       end end
       if rm.CheckIngredient(recipename, "iron-plate") then
-        rm.RemoveIngredient(recipename, "iron-plate", 1, 1)
-        rm.AddIngredient(recipename, "gunpowder", gunpowdercost, gunpowdercost)
+        rm.RemoveIngredient(recipename, "iron-plate", 1)
+        rm.AddIngredient(recipename, "gunpowder", gunpowdercost)
       end
     end
   end
 end
 
-rm.AddIngredient("firearm-magazine-bismuth", "gunpowder", 1, 1)
-rm.AddIngredient("shotgun-shell-bismuth", "gunpowder", 1, 1)
+rm.AddIngredient("firearm-magazine-bismuth", "gunpowder", 1)
+rm.AddIngredient("shotgun-shell-bismuth", "gunpowder", 1)
 
 --some bz mods mess with shotgun shells in DFF so this is here instead of DU
 
 if rm.CheckIngredient("shotgun-shell", "stone") then
-  rm.RemoveIngredient("shotgun-shell", "stone", 2, 2)
+  rm.RemoveIngredient("shotgun-shell", "stone", 2)
 else if rm.CheckIngredient("shotgun-shell", "salt") then
-  rm.RemoveIngredient("shotgun-shell", "salt", 2, 2)
+  rm.RemoveIngredient("shotgun-shell", "salt", 2)
 else
-  rm.RemoveIngredient("shotgun-shell", "iron-plate", 1, 1)
-  rm.RemoveIngredient("shotgun-shell", "lead-plate", 1, 1)
+  rm.RemoveIngredient("shotgun-shell", "iron-plate", 1)
+  rm.RemoveIngredient("shotgun-shell", "lead-plate", 1)
 end end
-rm.RemoveIngredient("shotgun-shell", "coal", 2, 2)
-rm.AddIngredient("shotgun-shell", "gunpowder", 2, 2)
+rm.RemoveIngredient("shotgun-shell", "coal", 2)
+rm.AddIngredient("shotgun-shell", "gunpowder", 2)
 
 require("deadlock")
 require("compat.final")

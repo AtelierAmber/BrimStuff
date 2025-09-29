@@ -47,7 +47,7 @@ if parts.waste then
     rm.AddProductRaw("polyacrylonitrile", {type="fluid", name="chemical-waste", amount=5})
     rm.AddProductRaw("fullerenes", {type="fluid", name="chemical-waste", amount=20})
     rm.AddProductRaw("nanotubes", {type="fluid", name=parts.acidwaste, amount=1})
-    rm.RemoveProduct("nanotubes", "dirty-water", 99999, 99999)
+    rm.RemoveProduct("nanotubes", "dirty-water", 99999)
     rm.AddProductRaw("carbon-black", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 10 or 5})
     rm.AddProductRaw("graphite-carbon-black", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 30 or 15})
   end
@@ -60,13 +60,13 @@ tf.removeRecipeUnlock("sulfur-processing", "sulfur")
 tf.addRecipeUnlock("advanced-oil-processing", "sulfur")
 
 if rm.CheckIngredient("chemical-plant", "stone-brick") then
-  rm.AddIngredient("basic-chemical-plant", "stone-brick", 5, 5)
-  rm.RemoveIngredient("chemical-plant", "stone-brick", 99999, 99999)
-  rm.RemoveIngredient("oil-refinery", "stone-brick", 99999, 99999)
+  rm.AddIngredient("basic-chemical-plant", "stone-brick", 5)
+  rm.RemoveIngredient("chemical-plant", "stone-brick", 99999)
+  rm.RemoveIngredient("oil-refinery", "stone-brick", 99999)
 end
 if data.raw.item["silver-plate"] then
   --silver plate already in burner chemical plant.
-  rm.RemoveIngredient("chemical-plant", "silver-plate", 5, 5)
+  rm.RemoveIngredient("chemical-plant", "silver-plate", 5)
   tf.addPrereq("basic-chemistry", "silver-processing")
 end
 rm.ReplaceProportional("chemical-plant", "pipe", "basic-chemical-plant", 1/5)
@@ -119,10 +119,10 @@ if rm.CheckIngredient("explosives", "formaldehyde") then
   tf.addRecipeUnlock("explosives", "tnt")
 else
   data.raw.item["explosives"].localised_name = {"item-name.tnt"}
-  rm.RemoveIngredient("explosives", "water", 99999, 99999)
-  rm.RemoveIngredient("explosives", "sulfur", 99999, 99999)
-  rm.AddIngredient("explosives", "sulfuric-acid", 10*boom_factor, 20*boom_factor)
-  rm.AddIngredient("explosives", "nitric-acid", 10*boom_factor, 20*boom_factor)
+  rm.RemoveIngredient("explosives", "water", 99999)
+  rm.RemoveIngredient("explosives", "sulfur", 99999)
+  rm.AddIngredient("explosives", "sulfuric-acid", 10*boom_factor)
+  rm.AddIngredient("explosives", "nitric-acid", 10*boom_factor)
   rm.ReplaceProportional("explosives", "coal", "toluene", 1)
   if parts.waste then
     rm.AddProductRaw("explosives", {type="fluid", name="chemical-waste", amount=30*boom_factor})
@@ -132,26 +132,26 @@ end
 --"rubber cement is not cement! you idiot!"
 --you know what else isn't cement? wet bricks
 tf.addPrereq("concrete", "toluene-production")
-rm.ReplaceIngredient("concrete", "iron-ore", "toluene", 1, 1)
-rm.RemoveIngredient("concrete", "iron-stick", 99999, 99999)
+rm.ReplaceIngredient("concrete", "iron-ore", "toluene", 1)
+rm.RemoveIngredient("concrete", "iron-stick", 99999)
 
 tf.addPrereq(mods["Krastorio2"] and "kr-fuel" or "flammables", "toluene-production")
 tf.removeRecipeUnlock("oil-processing", "solid-fuel-from-petroleum-gas")
 tf.addRecipeUnlock("flammables", "solid-fuel-from-petroleum-gas") --this should just be vanilla tbh. why does the flammables tech exist.
 
 rm.multiply("solid-fuel-from-petroleum-gas", 6, true, true, true)
-rm.RemoveIngredient("solid-fuel-from-petroleum-gas", "petroleum-gas", 20, 20)
-rm.AddIngredient("solid-fuel-from-petroleum-gas", "toluene", 1, 1)
+rm.RemoveIngredient("solid-fuel-from-petroleum-gas", "petroleum-gas", 20)
+rm.AddIngredient("solid-fuel-from-petroleum-gas", "toluene", 1)
 
 rm.multiply("solid-fuel-from-light-oil", 6, true, true, true)
-rm.RemoveIngredient("solid-fuel-from-light-oil", "light-oil", 10, 10)
-rm.AddIngredient("solid-fuel-from-light-oil", "toluene", 1, 1)
+rm.RemoveIngredient("solid-fuel-from-light-oil", "light-oil", 10)
+rm.AddIngredient("solid-fuel-from-light-oil", "toluene", 1)
 
 rm.multiply("solid-fuel-from-heavy-oil", 6, true, true, true)
-rm.RemoveIngredient("solid-fuel-from-heavy-oil", "heavy-oil", 20, 20)
-rm.AddIngredient("solid-fuel-from-heavy-oil", "toluene", 1, 1)
+rm.RemoveIngredient("solid-fuel-from-heavy-oil", "heavy-oil", 20)
+rm.AddIngredient("solid-fuel-from-heavy-oil", "toluene", 1)
 
-rm.ReplaceIngredient("grenade", "coal", "gunpowder", 10, 10)
+rm.ReplaceIngredient("grenade", "coal", "gunpowder", 10)
 
 rm.AddProductRaw("basic-oil-processing", {type="item", name="sulfur", amount=1, probability=0.5})
 rm.AddProductRaw("advanced-oil-processing", {type="item", name="sulfur", amount=1, probability=0.5})
@@ -170,17 +170,17 @@ if parts.oil_tol then
 end
 
 if not rm.CheckIngredient("assembling-machine-2", "gearbox") then
-  rm.RemoveIngredient("assembling-machine-2", "iron-gear-wheel", 99999, 99999)
-  rm.RemoveIngredient("assembling-machine-2", "bakelite", 99999, 99999)
-  rm.AddIngredient("assembling-machine-2", "drive-belt", 3, 5)
+  rm.RemoveIngredient("assembling-machine-2", "iron-gear-wheel", 99999)
+  rm.RemoveIngredient("assembling-machine-2", "bakelite", 99999)
+  rm.AddIngredient("assembling-machine-2", "drive-belt", 3)
 end
 
 if not rm.CheckIngredient("assembling-machine-3", "electric-engine-unit") then
-  rm.AddIngredient("assembling-machine-3", "drive-belt", 5, 5)
+  rm.AddIngredient("assembling-machine-3", "drive-belt", 5)
 end
 
 if data.raw.item["machining-tool"] then
-  rm.ReplaceIngredient("machining-tool", "tungsten-carbide", "drive-belt", 1, 1)
+  rm.ReplaceIngredient("machining-tool", "tungsten-carbide", "drive-belt", 1)
   --tool costs either 2 TC or 1 steel so only the tungsten tool has room to cheapen.
   --bz makes steel less of an iron bottleneck so i could theoretically have it dynamically react but ehh
   --bz also makes steel an annoying hassle
@@ -191,14 +191,14 @@ if not mods["Krastorio2"] then
 end
 
 tf.addPrereq("electric-energy-distribution-1", "rubber")
-rm.AddIngredient("medium-electric-pole", "rubber", 1, 1)
-rm.AddIngredient("big-electric-pole", "rubber", 2, 2)
+rm.AddIngredient("medium-electric-pole", "rubber", 1)
+rm.AddIngredient("big-electric-pole", "rubber", 2)
 
 tf.addPrereq("engine", "rubber")
 if mods["aai-industry"] then
   rm.ReplaceProportional("engine-unit", "iron-gear-wheel", "drive-belt", 1/2)
 else
-  rm.ReplaceIngredient("engine-unit", "iron-gear-wheel", "drive-belt", 1, 1)
+  rm.ReplaceIngredient("engine-unit", "iron-gear-wheel", "drive-belt", 1)
 end
 
 if mods["ThemTharHills-Updated"] then
@@ -207,7 +207,7 @@ if mods["ThemTharHills-Updated"] then
   tf.removeRecipeUnlock("gold-processing", "nitric-acid-early")
   tf.removeRecipeUnlock("gold-processing", "nitric-acid")
 else
-  rm.AddIngredient("substation", "rubber", 10, 10)
+  rm.AddIngredient("substation", "rubber", 10)
 end
 
 if not mods["Krastorio2"] then
@@ -230,11 +230,11 @@ end end
 
 if not mods["BrassTacks-Updated"] then
   --airtight seal item does not exist, add gaskets or rubber as relevant
-  rm.ReplaceIngredient("pump", "graphite", gasket_item, 2, 2)
-  rm.RemoveIngredient("flamethrower-ammo", "steel-plate", 1, 1)
-  rm.AddIngredient("flamethrower-ammo", gasket_item, gasket_ratio, gasket_ratio)
+  rm.ReplaceIngredient("pump", "graphite", gasket_item, 2)
+  rm.RemoveIngredient("flamethrower-ammo", "steel-plate", 1)
+  rm.AddIngredient("flamethrower-ammo", gasket_item, gasket_ratio)
   if not mods["LunarLandings"] then
-    rm.AddIngredient("rocket-fuel", gasket_item, gasket_ratio, gasket_ratio)
+    rm.AddIngredient("rocket-fuel", gasket_item, gasket_ratio)
   end
 end
 
@@ -252,12 +252,12 @@ else
 
   --in this situation invar valves have not replaced gears in chem plants. airtight-seals are a bit more expensive than gears, gaskets and rubber less so.
   --even in the latter cases gears are added to the process via burner chem plants so I can retain my reputation as Annoying Person Who Makes Machines Too Expensive
-  rm.ReplaceIngredient("chemical-plant", "iron-gear-wheel", gasket_item, gasket_ratio * 5, gasket_ratio * 5)
-  rm.ReplaceIngredient("oil-refinery", "iron-gear-wheel", gasket_item, gasket_ratio * 10, gasket_ratio * 10)
+  rm.ReplaceIngredient("chemical-plant", "iron-gear-wheel", gasket_item, gasket_ratio * 5)
+  rm.ReplaceIngredient("oil-refinery", "iron-gear-wheel", gasket_item, gasket_ratio * 10)
 
-  rm.AddIngredient("fluid-wagon", gasket_item, gasket_ratio*3, gasket_ratio*3)
-  rm.AddIngredient("steam-turbine", gasket_item, gasket_ratio*10, gasket_ratio*10)
-  rm.AddIngredient("heat-exchanger", gasket_item, gasket_ratio*10, gasket_ratio*10)
+  rm.AddIngredient("fluid-wagon", gasket_item, gasket_ratio*3)
+  rm.AddIngredient("steam-turbine", gasket_item, gasket_ratio*10)
+  rm.AddIngredient("heat-exchanger", gasket_item, gasket_ratio*10)
 end
 
 tf.removePrereq("chemical-science-pack", "sulfur-processing")
@@ -269,9 +269,9 @@ if mods["MoreScience"] then
   rm.SetCategory("purified-water", "basic-chemistry")
   rm.SetCategory("automation-science-fluid", "basic-chemistry")
   rm.SetCategory("logistic-science-fluid", "basic-chemistry")
-  rm.RemoveIngredient("logistic-science-fluid", "purified-water", 99999, 99999)
+  rm.RemoveIngredient("logistic-science-fluid", "purified-water", 99999)
   rm.SetCategory("military-science-fluid", "basic-chemistry")
-  rm.RemoveIngredient("military-science-fluid", "purified-water", 99999, 99999)
+  rm.RemoveIngredient("military-science-fluid", "purified-water", 99999)
   tf.removePrereq("sulfur-processing", "sulfur")
 
   if mods["Krastorio2"] then
@@ -287,7 +287,7 @@ if mods["MoreScience"] then
 end
 
 if mods["Krastorio2"] then
-  rm.ReplaceIngredient("fertilizer", "biomass", "potassium-nitrate", 1, 1)
+  rm.ReplaceIngredient("fertilizer", "biomass", "potassium-nitrate", 1)
   rm.ReplaceProportional("biters-research-data", "coke", "gunpowder", 2)
 else
   if mods["MoreScience"] then
@@ -298,20 +298,20 @@ else
 end
 
 tf.addPrereq("logistics-2", "rubber")
-rm.AddIngredient("fast-transport-belt", "rubber", 1, 1)
-rm.AddIngredient("fast-splitter", "rubber", 2, 2)
+rm.AddIngredient("fast-transport-belt", "rubber", 1)
+rm.AddIngredient("fast-splitter", "rubber", 2)
 rm.AddIngredient("car", "rubber", 10)
 
-rm.AddIngredient("express-transport-belt", "drive-belt", 1, 1)
-rm.AddIngredient("express-splitter", "drive-belt", 2, 2)
+rm.AddIngredient("express-transport-belt", "drive-belt", 1)
+rm.AddIngredient("express-splitter", "drive-belt", 2)
 
 if not mods["Krastorio2"] then
-  rm.AddIngredient("fast-underground-belt", "rubber", 8, 8)
-  rm.AddIngredient("express-underground-belt", "drive-belt", 8, 8)
+  rm.AddIngredient("fast-underground-belt", "rubber", 8)
+  rm.AddIngredient("express-underground-belt", "drive-belt", 8)
 end
 
 if not mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
-  rm.ReplaceIngredient("rocket-fuel", "light-oil", "nitric-acid", 10, 10)
+  rm.ReplaceIngredient("rocket-fuel", "light-oil", "nitric-acid", 10)
 end
 
 if mods["BrassTacks-Updated"] and not mods["IfNickel-Updated"] then
@@ -321,8 +321,8 @@ if mods["BrassTacks-Updated"] and not mods["IfNickel-Updated"] then
 end
 
 if mods["LunarLandings"] then
-  rm.AddIngredient("ll-lunar-foundation", "toluene", 1, 1)
-  rm.AddIngredient("ll-astrocrystal-processing", "toluene", 1, 1)
+  rm.AddIngredient("ll-lunar-foundation", "toluene", 1)
+  rm.AddIngredient("ll-astrocrystal-processing", "toluene", 1)
 
   --if not mods["ThemTharHills-Updated"] then
     --rm.AddIngredient("ll-rich-moon-rock-processing", "nitric-acid", 25, 25)
@@ -345,8 +345,7 @@ if mods["LunarLandings"] then
     end
 
     data.raw["assembling-machine"]["ll-low-grav-assembling-machine"].fluid_boxes[4].production_type = "output"
-    data.raw["assembling-machine"]["ll-low-grav-assembling-machine"].fluid_boxes[4].pipe_connections[1].type = "output"
-    data.raw["assembling-machine"]["ll-low-grav-assembling-machine"].fluid_boxes[4].base_level = 1
+    data.raw["assembling-machine"]["ll-low-grav-assembling-machine"].fluid_boxes[4].pipe_connections[1].flow_direction = "output"
   end
 end
 

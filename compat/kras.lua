@@ -9,7 +9,7 @@ if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
   gasket_cost = 1
 end
 
-local airseal = false
+local airseal = nil
 local airseal_cost = 1
 if not mods["IfNickel-Updated"] then
   if mods["BrassTacks-Updated"] then
@@ -23,20 +23,20 @@ end
 if mods["advanced-chemical-plant"] and not mods["Krastorio2"] then
   if not (mods["BrassTacks-Updated"] or mods["IfNickel-Updated"]) then
     if not mods["ThemTharHills-Updated"] then
-      rm.AddIngredient("kr-advanced-chemical-plant", "engine-unit", 8, 8) --galaxy brain
+      rm.AddIngredient("kr-advanced-chemical-plant", "engine-unit", 8) --galaxy brain
     end
-    rm.AddIngredient("kr-advanced-chemical-plant", gasket, 32*gasket_cost, 32*gasket_cost)
+    rm.AddIngredient("kr-advanced-chemical-plant", gasket, 32*gasket_cost)
   end
 end
 
 if mods["AdvancedAssemblyMachineStandalone"] and not mods["Krastorio2"] then
   if rm.CheckIngredient("assembling-machine-3", "electric-engine-unit") then
-    rm.AddIngredient("kr-advanced-assembling-machine", "drive-belt", 24, 24)
+    rm.AddIngredient("kr-advanced-assembling-machine", "drive-belt", 24)
   end
 end
 
 if mods["advanced-centrifuge"] then
-  rm.AddIngredient("k11-advanced-centrifuge", "drive-belt", 20, 20)
+  rm.AddIngredient("k11-advanced-centrifuge", "drive-belt", 20)
 end
 
 if mods["Krastorio2"] then
@@ -59,36 +59,36 @@ if mods["Krastorio2"] then
     tf.addRecipeUnlock("kr-advanced-chemistry", "ammonia-from-potassium-nitrate")
   end
 
-  rm.ReplaceIngredient("pollution-filter", "plastic-bar", "rubber", 1, 1)
+  rm.ReplaceIngredient("pollution-filter", "plastic-bar", "rubber", 1)
 
   if not mods["BrassTacks-Updated"] then
-    rm.AddIngredient("kr-steel-pump", gasket, 2*gasket_cost, 2*gasket_cost)
-    rm.AddIngredient("rocket-fuel-with-ammonia", gasket, gasket_cost, gasket_cost)
-    rm.AddIngredient("rocket-fuel-with-hydrogen-chloride", gasket, gasket_cost, gasket_cost)
+    rm.AddIngredient("kr-steel-pump", gasket, 2*gasket_cost)
+    rm.AddIngredient("rocket-fuel-with-ammonia", gasket, gasket_cost)
+    rm.AddIngredient("rocket-fuel-with-hydrogen-chloride", gasket, gasket_cost)
   end
 
   if not mods["IfNickel-Updated"] then
-    rm.AddIngredient("kr-electrolysis-plant", airseal, 5*airseal_cost, 5*airseal_cost)
-    rm.AddIngredient("kr-filtration-plant", airseal, 5*airseal_cost, 5*airseal_cost)
-    rm.AddIngredient("kr-atmospheric-condenser", airseal, 5*airseal_cost, 5*airseal_cost)
-    rm.AddIngredient("kr-fuel-refinery", airseal, 5*airseal_cost, 5*airseal_cost)
+    rm.AddIngredient("kr-electrolysis-plant", airseal, 5*airseal_cost)
+    rm.AddIngredient("kr-filtration-plant", airseal, 5*airseal_cost)
+    rm.AddIngredient("kr-atmospheric-condenser", airseal, 5*airseal_cost)
+    rm.AddIngredient("kr-fuel-refinery", airseal, 5*airseal_cost)
     tf.addPrereq("kr-fluids-chemistry", "rubber")
   end
 
-  rm.AddIngredient("fuel-1", "toluene", 1, 1)
-  rm.RemoveIngredient("fuel-1", "light-oil", 10, 10)
+  rm.AddIngredient("fuel-1", "toluene", 1)
+  rm.RemoveIngredient("fuel-1", "light-oil", 10)
 end
 
 if mods["FluidMustFlow"] then
-  rm.AddIngredient("duct-t-junction", gasket, 3*gasket_cost, 3*gasket_cost)
-  rm.AddIngredient("duct-curve", gasket, 2*gasket_cost, 2*gasket_cost)
-  rm.AddIngredient("duct-cross", gasket, 4*gasket_cost, 4*gasket_cost)
-  rm.AddIngredient("duct-underground", gasket, 2*gasket_cost, 2*gasket_cost)
+  rm.AddIngredient("duct-t-junction", gasket, 3*gasket_cost)
+  rm.AddIngredient("duct-curve", gasket, 2*gasket_cost)
+  rm.AddIngredient("duct-cross", gasket, 4*gasket_cost)
+  rm.AddIngredient("duct-underground", gasket, 2*gasket_cost)
   if not mods["IfNickel-Updated"] then
-    rm.AddIngredient("non-return-duct", gasket, 2*gasket_cost, 2*gasket_cost)
+    rm.AddIngredient("non-return-duct", gasket, 2*gasket_cost)
     if not mods["BrassTacks-Updated"] then
-      rm.AddIngredient("duct-end-point-intake", gasket, 6*gasket_cost, 6*gasket_cost)
-      rm.AddIngredient("duct-end-point-outtake", gasket, 6*gasket_cost, 6*gasket_cost)
+      rm.AddIngredient("duct-end-point-intake", gasket, 6*gasket_cost)
+      rm.AddIngredient("duct-end-point-outtake", gasket, 6*gasket_cost)
     end
   end
 end

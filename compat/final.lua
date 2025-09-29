@@ -12,16 +12,16 @@ end
 
 if mods["space-exploration"] then
   if not mods["BrassTacks-Updated"] then
-    rm.AddIngredient("se-vulcanite-rocket-fuel", gasket, gasket_cost, gasket_cost)
+    rm.AddIngredient("se-vulcanite-rocket-fuel", gasket, gasket_cost)
   end
 
   if parts.waste then
     rm.AddProductRaw("se-processing-unit-holmium", {type="fluid", name=parts.acidwaste, amount=mods["Krastorio2"] and 4 or 2})
     rm.AddProductRaw("cpu-holmium", {type="fluid", name=parts.acidwaste, amount=50})
-    rm.RemoveProduct("se-core-fragment-omni", "sulfur", 6, 6)
+    rm.RemoveProduct("se-core-fragment-omni", "sulfur", 6)
     --waste -> coal -> oil -> sulfur if you must
   else
-    rm.RemoveProduct("se-core-fragment-omni", "sulfur", 4, 4)
+    rm.RemoveProduct("se-core-fragment-omni", "sulfur", 4)
   end
   rm.AddProductRaw("se-core-fragment-sulfur-ore", {name="crude-oil", type="fluid", amount=10})
 end

@@ -22,7 +22,8 @@ gh.fluid_boxes = {
     base_area = 10,
     base_level = -1,
     pipe_connections = {{ type="input", position = {0, -2} }},
-    secondary_draw_orders = { north = -1 }
+    secondary_draw_orders = { north = -1 },
+    volume = 1000,
   },
   {
     production_type = "output",
@@ -31,7 +32,8 @@ gh.fluid_boxes = {
     base_area = 1,
     base_level = 1,
     pipe_connections = {{ type="output", position = {0, 2} }},
-    secondary_draw_orders = { north = -1 }
+    secondary_draw_orders = { north = -1 },
+    volume = 1000,
   }
 }
 if not mods["LunarLandings"] then
@@ -169,7 +171,7 @@ gh.energy_source =
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = -2
+      emissions_per_minute = {pollution = -2, spores = 2}
     }
 gh.energy_usage = "30kW"
 
@@ -210,7 +212,8 @@ data:extend({
     energy_required = 1,
     result = "brimstuff-greenhouse",
     enabled = false,
-    ingredients = {{"iron-stick", 16}, {"pipe", 5}, {"stone-brick", 5}, parts.optionalIngredient("glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
+    ingredients = {{type="item", name="iron-stick", amount=16}, {type="item", name="pipe", amount=5}, {type="item", name="stone-brick", amount=5}, 
+      parts.optionalIngredient("glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
   },
   {
     type = "item-subgroup",

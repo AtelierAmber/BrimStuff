@@ -1,5 +1,6 @@
 local parts = require("variable-parts")
 local rm = require("recipe-modify")
+local tf = require("techfuncs")
 
 data:extend({
   {
@@ -7,8 +8,8 @@ data:extend({
     name = "gunpowder",
     category = "basic-chemistry",
     energy_required = 2,
-    ingredients = {{"sulfur", 2}, {"coal", 2}, {"potassium-nitrate", 1}, {type="fluid", name="water", amount=60}},
-    results = {{type="item", name="gunpowder", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=60} or nil},
+    ingredients = {{type="item", name="sulfur", amount=2}, {type="item", name="coal", amount=2}, {type="item", name="potassium-nitrate", amount=1}, {type="fluid", name="water", amount=60}},
+    results = tf.compilePrereqs{{type="item", name="gunpowder", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=60} or nil},
     main_product = "gunpowder",
     enabled = false,
     crafting_machine_tint = {
@@ -22,20 +23,11 @@ data:extend({
     type = "recipe",
     name = "rubber",
     category = "basic-chemistry",
-    normal = {
-      energy_required = 1,
-      ingredients = {{"wood", 3}, {"sulfur", 1}, {type="fluid", name="water", amount=50}},
-      results = {{type="item", name="rubber", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=20} or nil},
-      main_product = "rubber",
-      enabled = false
-    },
-    expensive = {
-      energy_required = 1,
-      ingredients = {{"wood", 3}, {"sulfur", 2}, {type="fluid", name="water", amount=50}},
-      results = {{type="item", name="rubber", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=20} or nil},
-      main_product = "rubber",
-      enabled = false
-    },
+    energy_required = 1,
+    ingredients = {{type="item", name="wood", amount=3}, {type="item", name="sulfur", amount=1}, {type="fluid", name="water", amount=50}},
+    results = tf.compilePrereqs{{type="item", name="rubber", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=20} or nil},
+    main_product = "rubber",
+    enabled = false,
     crafting_machine_tint = {
       primary = {1, 0.55, 0.55, 1},
       secondary = {0.8, 0.4, 0.1, 1},
@@ -48,8 +40,8 @@ data:extend({
     name = "toluene-coal",
     category = "chemistry",
     energy_required = 1,
-    ingredients = {{"coal", 1}, {type="fluid", name="steam", amount=5}},
-    results = {{type="item", name="toluene", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=5} or nil},
+    ingredients = {{type="item", name="coal", amount=1}, {type="fluid", name="steam", amount=5}},
+    results = tf.compilePrereqs{{type="item", name="toluene", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=5} or nil},
     main_product = "toluene",
     icons = {
       {
@@ -78,8 +70,8 @@ data:extend({
     name = "toluene-wood",
     category = "chemistry",
     energy_required = 2,
-    ingredients = {{"wood", 5}, {type="fluid", name="steam", amount=10}},
-    results = {{type="item", name="toluene", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=15} or nil},
+    ingredients = {{type="item", name="wood", amount=5}, {type="fluid", name="steam", amount=10}},
+    results = tf.compilePrereqs{{type="item", name="toluene", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=15} or nil},
     main_product = "toluene",
     icons = {
       {
@@ -108,8 +100,8 @@ data:extend({
     name = "potassium-nitrate",
     category = "basic-chemistry",
     energy_required = 1,
-    ingredients = {{"stone", 1}, {type="fluid", name="water", amount=30}},
-    results = {{type="item", name="potassium-nitrate", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=10} or nil},
+    ingredients = {{type="item", name="stone", amount=1}, {type="fluid", name="water", amount=30}},
+    results = tf.compilePrereqs{{type="item", name="potassium-nitrate", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=10} or nil},
     main_product = "potassium-nitrate",
     allow_decomposition = false,
     enabled = false,
@@ -124,37 +116,20 @@ data:extend({
     type = "recipe",
     name = "drive-belt",
     category = "crafting",
-    normal = {
-      energy_required = 2,
-      ingredients = {{"rubber", 3}, {"iron-gear-wheel", 2}, parts.preferred({"bronze-plate", "iron-stick"}, {1, 1})},
-      result = "drive-belt",
-      enabled = false
-    },
-    expensive = {
-      energy_required = 2,
-      ingredients = {{"rubber", 6}, {"iron-gear-wheel", 2}, parts.preferred({"bronze-plate", "iron-stick"}, {2, 2})},
-      result = "drive-belt",
-      enabled = false
-    }
+    energy_required = 2,
+    ingredients = {{type="item", name="rubber", amount=3}, {type="item", name="iron-gear-wheel", amount=2}, parts.preferred({"bronze-plate", "iron-stick"}, {1, 1})},
+    result = "drive-belt",
+    enabled = false,
   },
   {
     type = "recipe",
     name = "synthetic-rubber",
     category = "chemistry",
-    normal = {
-      energy_required = 1,
-      ingredients = {{type="fluid", name="petroleum-gas", amount=20}, {"sulfur", 1}, {"toluene", 1}},
-      results = {{type="item", name="rubber", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=35} or nil},
-      main_product = "rubber",
-      enabled = false
-    },
-    expensive = {
-      energy_required = 1,
-      ingredients = {{type="fluid", name="petroleum-gas", amount=20}, {"sulfur", 2}, {"toluene", 1}},
-      results = {{type="item", name="rubber", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=35} or nil},
-      main_product = "rubber",
-      enabled = false
-    },
+    energy_required = 1,
+    ingredients = {{type="fluid", name="petroleum-gas", amount=20}, {type="item", name="sulfur", amount=1}, {type="item", name="toluene", amount=1}},
+    results = tf.compilePrereqs{{type="item", name="rubber", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=35} or nil},
+    main_product = "rubber",
+    enabled = false,
     localised_name = {"recipe-name.synthetic-rubber"},
     icons = {
       {
@@ -197,7 +172,7 @@ data:extend({
     enabled = false,
     energy_required = 1,
     allow_decomposition = false,
-    ingredients = {{"potassium-nitrate", 1}, {type="fluid", name="water", amount=30}},
+    ingredients = {{type="item", name="potassium-nitrate", amount=1}, {type="fluid", name="water", amount=30}},
     results = {{type="fluid", name="nitric-acid", amount=5}},
     crafting_machine_tint = {
       primary = {0.75, 0.75, 1, 1},
@@ -215,7 +190,7 @@ if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
       name = "gasket",
       category = "advanced-crafting",
       energy_required = 0.5,
-      ingredients = {{"rubber", 1}, {"graphite", 1}},
+      ingredients = {{type="item", name="rubber", amount=1}, {type="item", name="graphite", amount=1}},
       result = "gasket",
       enabled = false
     }
@@ -507,8 +482,8 @@ if not mods["Krastorio2"] then
       energy_required = 1,
       subgroup = "fluid-recipes",
       order = "y04", --this is where it belongs with se. otherwise it will be moved later.
-      ingredients = {{"copper-plate", 1}, {"potassium-nitrate", 1}, {type="fluid", name="water", amount=100}, {type="fluid", name="sulfuric-acid", amount=10}},
-      results = {{type="fluid", name="nitric-acid", amount=100}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
+      ingredients = {{type="item", name="copper-plate", amount=1}, {type="item", name="potassium-nitrate", amount=1}, {type="fluid", name="water", amount=100}, {type="fluid", name="sulfuric-acid", amount=10}},
+      results = tf.compilePrereqs{{type="fluid", name="nitric-acid", amount=100}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
       main_product = "nitric-acid",
       crafting_machine_tint = {
         primary = {0.5, 0.75, 1, 1},
@@ -528,8 +503,8 @@ if mods["bzgas"] then
       category = "chemistry",
       enabled = false,
       energy_required = 1,
-      ingredients = {{type="fluid", name="sulfuric-acid", amount=10}, {type="fluid", name="nitric-acid", amount=10}, {"toluene", 1}},
-      results = {{type="item", name="tnt", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
+      ingredients = {{type="fluid", name="sulfuric-acid", amount=10}, {type="fluid", name="nitric-acid", amount=10}, {type="item", name="toluene", amount=1}},
+      results = tf.compilePrereqs{{type="item", name="tnt", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
       main_product = "tnt",
       crafting_machine_tint = {
         primary = {1, 0.5, 0, 1},
@@ -562,20 +537,11 @@ if mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
       category = "chemistry",
       subgroup = "fluid-recipes",
       order = "y03[ammonia]alt",
-      normal = {
-        allow_decomposition = false,
-        enabled = false,
-        energy_required = 2,
-        ingredients = {{type="fluid", name="water", amount=20}, {type="item", name="potassium-nitrate", amount=1}},
-        results = {{type="fluid", name="ammonia", amount=20}}
-      },
-      expensive = {
-        allow_decomposition = false,
-        enabled = false,
-        energy_required = 2,
-        ingredients = {{type="fluid", name="water", amount=20}, {type="item", name="potassium-nitrate", amount=2}},
-        results = {{type="fluid", name="ammonia", amount=20}}
-      },
+      allow_decomposition = false,
+      enabled = false,
+      energy_required = 2,
+      ingredients = {{type="fluid", name="water", amount=20}, {type="item", name="potassium-nitrate", amount=1}},
+      results = {{type="fluid", name="ammonia", amount=20}},
       crafting_machine_tint = {
         primary = {0.5, 0.5, 1, 1},
         secondary = {1, 1, 1, 1},
@@ -604,7 +570,7 @@ if parts.waste and mods["ThemTharHills-Updated"] then
       allow_decomposition = false,
       enabled = false,
       energy_required = 5,
-      ingredients = {{type="fluid", name="depleted-acid", amount=150}, not mods["Krastorio2"] and {type="fluid", name="water", amount=50} or nil},
+      ingredients = tf.compilePrereqs{{type="fluid", name="depleted-acid", amount=150}, not mods["Krastorio2"] and {type="fluid", name="water", amount=50} or nil},
       results = {{type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 149 or 199}, {type="item", name="gold-powder", amount=1}},
       emissions_multiplier = 1.5,
       crafting_machine_tint = {

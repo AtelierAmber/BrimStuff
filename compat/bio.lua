@@ -24,20 +24,20 @@ if mods["Bio_Industries"] then
     rm.AddProductRaw("bi-coke-coal", {type="item", name="toluene", amount=1, probability=0.5})
   end
   rm.multiply("bi-solid-fuel", 3, true, true, true)
-  rm.RemoveIngredient("bi-solid-fuel", "wood-bricks", 2, 2)
-  rm.AddIngredient("bi-solid-fuel", "toluene", 1, 1)
+  rm.RemoveIngredient("bi-solid-fuel", "wood-bricks", 2)
+  rm.AddIngredient("bi-solid-fuel", "toluene", 1)
 
   rm.multiply("bi-fertilizer-1", 2, true, true, true)
-  rm.ReplaceIngredient("bi-fertilizer-1", "sulfur", "potassium-nitrate", 1, 1)
-  rm.AddIngredient("bi-adv-fertilizer-2", "nitric-acid", 30, 30)
+  rm.ReplaceIngredient("bi-fertilizer-1", "sulfur", "potassium-nitrate", 1)
+  rm.AddIngredient("bi-adv-fertilizer-2", "nitric-acid", 30)
 
-  rm.AddIngredient("bi-biomass-conversion-1", "toluene", 3, 3)
-  rm.AddIngredient("bi-biomass-conversion-2", "toluene", 1, 1)
-  rm.AddIngredient("bi-biomass-conversion-3", "toluene", 1, 1)
-  rm.AddIngredient("bi-plastic-2", "toluene", 1, 1)
+  rm.AddIngredient("bi-biomass-conversion-1", "toluene", 3)
+  rm.AddIngredient("bi-biomass-conversion-2", "toluene", 1)
+  rm.AddIngredient("bi-biomass-conversion-3", "toluene", 1)
+  rm.AddIngredient("bi-plastic-2", "toluene", 1)
   if parts.waste then
     rm.AddProductRaw("bi-fertilizer-1", {type="fluid", name="chemical-waste", amount=20})
     rm.AddProductRaw("bi-adv-fertilizer-2", {type="fluid", name="chemical-waste", amount=50})
-    rm.AddProductRaw("bi-sulfur", {type="fluid", name=parts.acidwaste, amount=acidwaste == "depleted-acid" and 2 or 10})
+    rm.AddProductRaw("bi-sulfur", {type="fluid", name=parts.acidwaste, amount=parts.acidwaste == "depleted-acid" and 2 or 10})
   end
 end

@@ -41,7 +41,8 @@ bcp.fluid_boxes = {
     base_area = 10,
     base_level = -1,
     pipe_connections = {{ type="input", position = {0, -2} }},
-    secondary_draw_orders = { north = -1, west = -1 }
+    secondary_draw_orders = { north = -1, west = -1 },
+    volume = 1000,
   },
   {
     production_type = "output",
@@ -50,85 +51,66 @@ bcp.fluid_boxes = {
     base_area = 1,
     base_level = 1,
     pipe_connections = {{ type="output", position = {0, 2} }},
-    secondary_draw_orders = { north = -1, west = -1 }
+    secondary_draw_orders = { north = -1, west = -1 },
+    volume = 1000,
   }
 }
 
 bcp.minable.result="basic-chemical-plant"
 bcp.crafting_categories={"basic-chemistry"}
 
-bcp.animation = {
-  layers =
-  {
+bcp.graphics_set = {
+  animation = {
+    layers =
     {
-      filename = "__BrimStuff-Updated__/graphics/entity/burnerchem.png",
-      priority = "high",
-      width = 116,
-      height = 93,
-      frame_count = 1,
-      line_length = 1,
-      shift = util.by_pixel(10.5, 3)
-    },
-    {
-      filename = "__BrimStuff-Updated__/graphics/entity/burnerchem_shadow.png",
-      priority = "high",
-      width = 116,
-      height = 93,
-      frame_count = 1,
-      line_length = 1,
-      shift = util.by_pixel(10.5, 3),
-      draw_as_shadow = true
-    },
-    {
-      filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
-      priority="high",
-      x = 31,
-      y = 56,
-      width = 27,
-      height = 14,
-      frame_count = 1,
-      line_length = 1,
-      shift = util.by_pixel(-1.5, 12.9),
-      tint = {0.5,0.5,0.5,1},
-      hr_version =
       {
-        filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace.png",
+        filename = "__BrimStuff-Updated__/graphics/entity/burnerchem.png",
+        priority = "high",
+        width = 116,
+        height = 93,
+        frame_count = 1,
+        line_length = 1,
+        shift = util.by_pixel(10.5, 3)
+      },
+      {
+        filename = "__BrimStuff-Updated__/graphics/entity/burnerchem_shadow.png",
+        priority = "high",
+        width = 116,
+        height = 93,
+        frame_count = 1,
+        line_length = 1,
+        shift = util.by_pixel(10.5, 3),
+        draw_as_shadow = true
+      },
+      {
+        filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
         priority="high",
-        x = 62,
-        y = 112,
-        width = 54,
-        height = 28,
+        x = 31,
+        y = 56,
+        width = 27,
+        height = 14,
         frame_count = 1,
         line_length = 1,
         shift = util.by_pixel(-1.5, 12.9),
-        tint = {0.5,0.5,0.5,1},
-        scale = 0.5
+        tint = {0.5,0.5,0.5,1}
       }
     }
   }
 }
 
-bcp.working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].working_visualisations)
+bcp.graphics_set.working_visualisations = util.table.deepcopy(data.raw.furnace["steel-furnace"].graphics_set.working_visualisations)
 --lua y u no have plus equals
-bcp.working_visualisations[1].animation.shift[1] = bcp.working_visualisations[1].animation.shift[1] - 1/16
-bcp.working_visualisations[1].animation.hr_version.shift[1] = bcp.working_visualisations[1].animation.hr_version.shift[1] - 1/16
-bcp.working_visualisations[1].animation.shift[2] = bcp.working_visualisations[1].animation.shift[2] - 1/4
-bcp.working_visualisations[1].animation.hr_version.shift[2] = bcp.working_visualisations[1].animation.hr_version.shift[2] - 1/4
-bcp.working_visualisations[1].animation.animation_speed = 2
-bcp.working_visualisations[1].animation.hr_version.animation_speed = 2
+bcp.graphics_set.working_visualisations[1].animation.shift[1] = bcp.working_visualisations[1].animation.shift[1] - 1/16
+bcp.graphics_set.working_visualisations[1].animation.shift[2] = bcp.working_visualisations[1].animation.shift[2] - 1/4
+bcp.graphics_set.working_visualisations[1].animation.animation_speed = 2
 
-bcp.working_visualisations[2].animation.shift[1] = bcp.working_visualisations[2].animation.shift[1] - 1/16
-bcp.working_visualisations[2].animation.shift[2] = bcp.working_visualisations[2].animation.shift[2] - 1/4
+bcp.graphics_set.working_visualisations[2].animation.shift[1] = bcp.working_visualisations[2].animation.shift[1] - 1/16
+bcp.graphics_set.working_visualisations[2].animation.shift[2] = bcp.working_visualisations[2].animation.shift[2] - 1/4
 
-bcp.working_visualisations[4].animation.shift[1] = bcp.working_visualisations[4].animation.shift[1] - 1/16
-bcp.working_visualisations[4].animation.hr_version.shift[1] = bcp.working_visualisations[4].animation.hr_version.shift[1] - 1/16
-bcp.working_visualisations[4].animation.shift[2] = bcp.working_visualisations[4].animation.shift[2] - 1/4
-bcp.working_visualisations[4].animation.hr_version.shift[2] = bcp.working_visualisations[4].animation.hr_version.shift[2] - 1/4
+bcp.graphics_set.working_visualisations[4].animation.shift[1] = bcp.working_visualisations[4].animation.shift[1] - 1/16
+bcp.graphics_set.working_visualisations[4].animation.shift[2] = bcp.working_visualisations[4].animation.shift[2] - 1/4
 
-
-bcp.working_visualisations[3] = nil
-
-bcp.working_visualisations[5] = {
+bcp.graphics_set.working_visualisations[5] = {
       apply_recipe_tint = "tertiary",
       fadeout = true,
       constant_speed = true,
@@ -141,18 +123,7 @@ bcp.working_visualisations[5] = {
         width = 46,
         height = 94,
         animation_speed = 0.5,
-        shift = util.by_pixel(-2, -75),
-        hr_version =
-        {
-          filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-smoke-outer.png",
-          frame_count = 47,
-          line_length = 16,
-          width = 90,
-          height = 188,
-          animation_speed = 0.5,
-          shift = util.by_pixel(-2, -75),
-          scale = 0.5
-        }
+        shift = util.by_pixel(-2, -75)
       }
     }
 
@@ -184,15 +155,16 @@ bcp.working_visualisations[6] = {
         }
       }
 
+table.remove(bcp.graphics_set.working_visualisations, 3)
+
 bcp.crafting_speed = 0.5
-bcp.module_specification = nil
 bcp.allowed_effects = nil
 bcp.energy_source =
     {
       type = "burner",
       fuel_category = "chemical",
       effectivity = 1,
-      emissions_per_minute = 5,
+      emissions_per_minute = {pollution = 5},
       fuel_inventory_size = 1,
       light_flicker = {color = {0,0,0}},
       smoke =
@@ -225,6 +197,6 @@ data:extend({
     energy_required = 1,
     result = "basic-chemical-plant",
     enabled = false,
-    ingredients = {parts.preferred({"silver-plate", "aluminum-plate", "iron-plate"}, {5, 5, 5}), {"iron-gear-wheel", 5}, {"pipe", 5}}
+    ingredients = {parts.preferred({"silver-plate", "aluminum-plate", "iron-plate"}, {5, 5, 5}), {type="item", name="iron-gear-wheel", amount=5}, {type="item", name="pipe", amount=5}}
   }
 })

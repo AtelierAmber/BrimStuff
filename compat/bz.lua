@@ -24,9 +24,9 @@ if parts.waste then
 end
 
 if mods["bzcarbon"] then
-  rm.AddIngredient("nanotubes", "toluene", 1, 1)
+  rm.AddIngredient("nanotubes", "toluene", 1)
   if not mods["Krastorio2"] then
     rm.multiply("fullerenes", 2, true, true, true)
   end
-  rm.AddIngredient("fullerenes", "toluene", 1, 1)
+  rm.AddIngredient("fullerenes", "toluene", 1)
 end
