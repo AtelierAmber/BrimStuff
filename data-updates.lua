@@ -122,7 +122,7 @@ else
   rm.RemoveIngredient("explosives", "water", 99999)
   rm.RemoveIngredient("explosives", "sulfur", 99999)
   rm.AddIngredient("explosives", "sulfuric-acid", 10*boom_factor)
-  rm.AddIngredient("explosives", "nitric-acid", 10*boom_factor)
+  rm.AddIngredient("explosives", mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", 10*boom_factor)
   rm.ReplaceProportional("explosives", "coal", "toluene", 1)
   if parts.waste then
     rm.AddProductRaw("explosives", {type="fluid", name="chemical-waste", amount=30*boom_factor})
@@ -186,9 +186,7 @@ if data.raw.item["machining-tool"] then
   --bz also makes steel an annoying hassle
 end
 
-if not mods["Krastorio2"] then
-  tf.addRecipeUnlock("sulfur-processing", "nitric-acid")
-end
+tf.addRecipeUnlock("sulfur-processing", mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid")
 
 tf.addPrereq("electric-energy-distribution-1", "rubber")
 rm.AddIngredient("medium-electric-pole", "rubber", 1)
@@ -205,7 +203,7 @@ if mods["ThemTharHills-Updated"] then
   tf.addPrereq("high-voltage-equipment", "rubber")
   rm.ReplaceProportional("advanced-cable", "plastic-bar", "rubber", 1)
   tf.removeRecipeUnlock("gold-processing", "nitric-acid-early")
-  tf.removeRecipeUnlock("gold-processing", "nitric-acid")
+  tf.removeRecipeUnlock("gold-processing", mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid")
 else
   rm.AddIngredient("substation", "rubber", 10)
 end

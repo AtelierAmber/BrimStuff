@@ -49,8 +49,8 @@ if mods["space-exploration"] then
   end
 
   if not mods["ThemTharHills-Updated"] then
-    rm.ReplaceIngredient("se-observation-frame-blank", "light-oil", "nitric-acid", 10)
-    rm.ReplaceIngredient("se-observation-frame-blank-beryllium", "light-oil", "nitric-acid", 10)
+    rm.ReplaceIngredient("se-observation-frame-blank", "light-oil", mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", 10)
+    rm.ReplaceIngredient("se-observation-frame-blank-beryllium", "light-oil", mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", 10)
   end
 
   if airseal then

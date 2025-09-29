@@ -29,7 +29,7 @@ if mods["Bio_Industries"] then
 
   rm.multiply("bi-fertilizer-1", 2, true, true, true)
   rm.ReplaceIngredient("bi-fertilizer-1", "sulfur", "potassium-nitrate", 1)
-  rm.AddIngredient("bi-adv-fertilizer-2", "nitric-acid", 30)
+  rm.AddIngredient("bi-adv-fertilizer-2", mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", 30)
 
   rm.AddIngredient("bi-biomass-conversion-1", "toluene", 3)
   rm.AddIngredient("bi-biomass-conversion-2", "toluene", 1)

@@ -1,6 +1,18 @@
 local resource_autoplace = require("resource-autoplace")
 
+data.raw.planet.nauvis.map_gen_settings.autoplace_controls["sulfur-ore"] = {}
+data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["sulfur-ore"] = {}
+resource_autoplace.initialize_patch_set("sulfur-ore", true)
+
 data:extend({
+  {
+    type = "autoplace-control",
+    category = "resource",
+    name = "sulfur-ore",
+    localised_name = {"", (mods["LunarLandings"] and "[virtual-signal=ll-nauvis] " or "") .. "[entity=sulfur-ore] ", {"entity-name.sulfur-ore"}},
+    richness = true,
+    order = "b-dc"
+  },
   {
     type = "resource",
     name = "sulfur-ore",
@@ -11,6 +23,7 @@ data:extend({
     order="a-b-y",
     tree_removal_probability = 0.9,
     tree_removal_max_distance = 32 * 32,
+    map_color = mods["bztin"] and {0.65, 1, 0.15} or {0.8, 1, 0.3},
     minable =
     {
       mining_particle = "sulfur-particle",
@@ -52,19 +65,6 @@ data:extend({
         }
       }
     },
-    map_color = mods["bztin"] and {0.65, 1, 0.15} or {0.8, 1, 0.3},
     mining_visualisation_tint = {1, 1, 0.5}
   },
-  {
-    type = "autoplace-control",
-    category = "resource",
-    name = "sulfur-ore",
-    localised_name = {"", (mods["LunarLandings"] and "[virtual-signal=ll-nauvis] " or "") .. "[entity=sulfur-ore] ", {"entity-name.sulfur-ore"}},
-    richness = true,
-    order = "b-dc"
-  },
-  {
-    type = "noise-layer",
-    name = "sulfur-ore"
-  }
 })

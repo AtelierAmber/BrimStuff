@@ -173,7 +173,7 @@ data:extend({
     energy_required = 1,
     allow_decomposition = false,
     ingredients = {{type="item", name="potassium-nitrate", amount=1}, {type="fluid", name="water", amount=30}},
-    results = {{type="fluid", name="nitric-acid", amount=5}},
+    results = {{type="fluid", name=mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", amount=5}},
     crafting_machine_tint = {
       primary = {0.75, 0.75, 1, 1},
       secondary = {1, 1, 1, 1},
@@ -483,8 +483,8 @@ if not mods["Krastorio2"] then
       subgroup = "fluid-recipes",
       order = "y04", --this is where it belongs with se. otherwise it will be moved later.
       ingredients = {{type="item", name="copper-plate", amount=1}, {type="item", name="potassium-nitrate", amount=1}, {type="fluid", name="water", amount=100}, {type="fluid", name="sulfuric-acid", amount=10}},
-      results = tf.compilePrereqs{{type="fluid", name="nitric-acid", amount=100}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
-      main_product = "nitric-acid",
+      results = tf.compilePrereqs{{type="fluid", name=mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", amount=100}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
+      main_product = mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid",
       crafting_machine_tint = {
         primary = {0.5, 0.75, 1, 1},
         secondary = {1, 1, 1, 1},
@@ -503,7 +503,7 @@ if mods["bzgas"] then
       category = "chemistry",
       enabled = false,
       energy_required = 1,
-      ingredients = {{type="fluid", name="sulfuric-acid", amount=10}, {type="fluid", name="nitric-acid", amount=10}, {type="item", name="toluene", amount=1}},
+      ingredients = {{type="fluid", name="sulfuric-acid", amount=10}, {type="fluid", name=mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", amount=10}, {type="item", name="toluene", amount=1}},
       results = tf.compilePrereqs{{type="item", name="tnt", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=25} or nil},
       main_product = "tnt",
       crafting_machine_tint = {

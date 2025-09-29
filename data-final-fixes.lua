@@ -5,7 +5,7 @@ local parts = require("variable-parts")
 
 
 local allowed_recipes = {
-  mods["Krastorio2"] and "nitric-acid" or nil,
+  mods["Krastorio2"] and "kr-nitric-acid" or nil,
   "nitric-acid-early",
   "gunpowder",
   "potassium-nitrate",
@@ -41,8 +41,8 @@ tf.removeRecipeUnlock("kr-fluid-excess-handling", "kr-burn-depleted-acid")
 table.insert(data.raw["assembling-machine"]["chemical-plant"]["crafting_categories"], "basic-chemistry")
 
 if parts.waste then
-  data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = 3
-  data.raw["assembling-machine"]["basic-chemical-plant"].energy_source.emissions_per_minute = 4
+  data.raw["assembling-machine"]["chemical-plant"].energy_source.emissions_per_minute = {pollution = 3}
+  data.raw["assembling-machine"]["basic-chemical-plant"].energy_source.emissions_per_minute = {pollution = 4}
 end
 
 if mods["space-exploration"] then
