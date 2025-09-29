@@ -74,7 +74,8 @@ if parts.waste then
       default_temperature = 25,
       max_temperature = 100,
       base_color = {r=0.5, g=0, b=0.8, a=1},
-      flow_color = {r=1, g=0, b=1, a=1}
+      flow_color = {r=1, g=0, b=1, a=1},
+      auto_barrel = true,
     },
     {
       type = "item-subgroup",
@@ -95,7 +96,8 @@ if parts.waste then
         default_temperature = 25,
         max_temperature = 100,
         base_color = {r=0, g=0.6, b=0.8, a=1},
-        flow_color = {r=0, g=1, b=1, a=1}
+        flow_color = {r=0, g=1, b=1, a=1},
+        auto_barrel = true,
       }
     })
   end
@@ -126,7 +128,8 @@ if not mods["Krastorio2"] then
     default_temperature = 25,
     max_temperature = 25,
     base_color = {r=0.75, g=0.75, b=1, a=1},
-    flow_color = {r=1, g=1, b=1, a=1}
+    flow_color = {r=1, g=1, b=1, a=1},
+    auto_barrel = true
   }
   })
 end

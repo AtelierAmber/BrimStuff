@@ -191,7 +191,8 @@ data:extend({
     default_temperature = 25,
     max_temperature = 25,
     base_color = {r=0, g=0.6, b=0.2, a=1},
-    flow_color = {r=0, g=1, b=0, a=1}
+    flow_color = {r=0, g=1, b=0, a=1},
+    auto_barrel = true
   },
   {
     type = "item",

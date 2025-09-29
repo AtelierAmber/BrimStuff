@@ -356,28 +356,30 @@ require("compat.renai")
 require("compat.freight")
 require("compat.bio")
 
-data.raw.item["nitric-acid-barrel"].ib_badge = "NA"
-data.raw.recipe["fill-nitric-acid-barrel"].ib_badge = "NA"
-data.raw.recipe["fill-nitric-acid-barrel"].ib_corner = "left-bottom"
-data.raw.recipe["empty-nitric-acid-barrel"].ib_badge = "NA"
-data.raw.recipe["empty-nitric-acid-barrel"].ib_corner = "left-bottom"
+if not mods["Krastorio2"] then
+  data.raw.item["nitric-acid-barrel"].ib_badge = "NA"
+  data.raw.recipe["fill-nitric-acid-barrel"].ib_badge = "NA"
+  data.raw.recipe["fill-nitric-acid-barrel"].ib_corner = "left-bottom"
+  data.raw.recipe["empty-nitric-acid-barrel"].ib_badge = "NA"
+  data.raw.recipe["empty-nitric-acid-barrel"].ib_corner = "left-bottom"
+end
 if parts.green then
   data.raw.item["fertilizer-slurry-barrel"].ib_badge = "FS"
-  data.raw.recipe["fill-fertilizer-slurry-barrel"].ib_badge = "FS"
-  data.raw.recipe["fill-fertilizer-slurry-barrel"].ib_corner = "left-bottom"
+  data.raw.recipe["fertilizer-slurry-barrel"].ib_badge = "FS"
+  data.raw.recipe["fertilizer-slurry-barrel"].ib_corner = "left-bottom"
   data.raw.recipe["empty-fertilizer-slurry-barrel"].ib_badge = "FS"
   data.raw.recipe["empty-fertilizer-slurry-barrel"].ib_corner = "left-bottom"
 end
 if parts.waste then
   data.raw.item["chemical-waste-barrel"].ib_badge = "CW"
-  data.raw.recipe["fill-chemical-waste-barrel"].ib_badge = "CW"
-  data.raw.recipe["fill-chemical-waste-barrel"].ib_corner = "left-bottom"
+  data.raw.recipe["chemical-waste-barrel"].ib_badge = "CW"
+  data.raw.recipe["chemical-waste-barrel"].ib_corner = "left-bottom"
   data.raw.recipe["empty-chemical-waste-barrel"].ib_badge = "CW"
   data.raw.recipe["empty-chemical-waste-barrel"].ib_corner = "left-bottom"
   if mods["ThemTharHills-Updated"] then
     data.raw.item["depleted-acid-barrel"].ib_badge = "DA"
-    data.raw.recipe["fill-depleted-acid-barrel"].ib_badge = "DA"
-    data.raw.recipe["fill-depleted-acid-barrel"].ib_corner = "left-bottom"
+    data.raw.recipe["depleted-acid-barrel"].ib_badge = "DA"
+    data.raw.recipe["depleted-acid-barrel"].ib_corner = "left-bottom"
     data.raw.recipe["empty-depleted-acid-barrel"].ib_badge = "DA"
     data.raw.recipe["empty-depleted-acid-barrel"].ib_corner = "left-bottom"
   end
