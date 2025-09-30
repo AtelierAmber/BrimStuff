@@ -215,7 +215,7 @@ data:extend({
     results = {{type="item", name="brimstuff-greenhouse", amount=1}},
     enabled = false,
     ingredients = tf.compilePrereqs{{type="item", name="iron-stick", amount=16}, {type="item", name="pipe", amount=5}, {type="item", name="stone-brick", amount=5}, 
-      parts.optionalIngredient("kr-glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
+      parts.optionalIngredient(mods["Krastorio2"] and "kr-glass" or "glass", 10), parts.optionalIngredient("silver-brazing-alloy", 5)}
   },
   {
     type = "item-subgroup",
