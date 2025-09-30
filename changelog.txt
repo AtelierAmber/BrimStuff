@@ -1,7 +1,10 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.0.9
-Date: ????
+Version: 2.0.0
+Date: 2025-09-29
   Changes:
+    - Updated to 2.0.
+      - Lots of fixes and migrations. See github for blames
+      - Has been tested with and without K2 and SE
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.8
   Bugfixes:

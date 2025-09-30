@@ -1,13 +1,13 @@
 {
   "name": "BrimStuff-Updated",
-  "version": "1.0.9",
+  "version": "2.0.0",
   "title": "Brim Stuff 2.0",
-  "author": "planetfall",
-  "homepage": "",
+  "author": "ashier",
+  "homepage": "https://github.com/AtelierAmber/BrimStuff-Updated",
   "description": "Updated for 2.0. Adds minable sulfur, burner chemical plant, gunpowder and rubber. Changes how sulfur is obtained from oil. Optionally adds chemical waste reprocessing and greenhouses.",
   "factorio_version": "2.0",
-  "dependencies": ["base >= 2.0", "? ThemTharHills", "? BrassTacks", "? IfNickel", "? bzgold", "? bzaluminum", "? bzcarbon", "? bztin", "? bzfoundry", "? bzzirconium", "? bzgas", "? space-exploration", 
-  "? aai-industry", "? aai-containers", "? aai-signal-transmission", "? deadlock-beltboxes-loaders", "? DeadlockCrating", "? vtk-deep-core-mining", "? Krastorio2", "? FluidMustFlow", "? Expensive_Fluid_Must_Flow_Recipes", 
+  "dependencies": ["base >= 2.0", "? ThemTharHills-Updated", "? BrassTacks-Updated", "? IfNickel-Updated", "? bzgold", "? bzaluminum", "? bzcarbon", "? bztin", "? bzfoundry", "? bzzirconium", "? bzgas", "? space-exploration", 
+  "? aai-industry", "? aai-containers", "? aai-signal-transmission", "? deadlock-beltboxes-loaders", "? DeadlockCrating", "? vtk-deep-core-mining", "? FluidMustFlow", "? Expensive_Fluid_Must_Flow_Recipes", 
   "? Krastorio2", "? RenaiTransportation", "? cargo-ships", "? intermodal-containers", "? LunarLandings"],
   "package": {
     "git_publish_branch": "main",
