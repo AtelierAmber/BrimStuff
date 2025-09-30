@@ -750,7 +750,7 @@ end
 if mods["space-exploration"] then
   se_delivery_cannon_recipes["potassium-nitrate"] = {name="potassium-nitrate"}
   se_delivery_cannon_recipes["rubber"] = {name="rubber"}
-  se_delivery_cannon_recipes["nitric-acid-barrel"] = {name="nitric-acid-barrel"}
+  if not mods["Krastorio2"] then se_delivery_cannon_recipes["nitric-acid-barrel"] = {name="nitric-acid-barrel"} end
   if data.raw.item["tnt"] then
     se_delivery_cannon_recipes["tnt"] = {name="tnt"}
   end

@@ -356,8 +356,8 @@ require("compat.bio")
 
 if not mods["Krastorio2"] then
   data.raw.item["nitric-acid-barrel"].ib_badge = "NA"
-  data.raw.recipe["fill-nitric-acid-barrel"].ib_badge = "NA"
-  data.raw.recipe["fill-nitric-acid-barrel"].ib_corner = "left-bottom"
+  data.raw.recipe["nitric-acid-barrel"].ib_badge = "NA"
+  data.raw.recipe["nitric-acid-barrel"].ib_corner = "left-bottom"
   data.raw.recipe["empty-nitric-acid-barrel"].ib_badge = "NA"
   data.raw.recipe["empty-nitric-acid-barrel"].ib_corner = "left-bottom"
 end
