@@ -2,6 +2,10 @@ local parts = require("variable-parts")
 local rm = require("recipe-modify")
 local tf = require("techfuncs")
 
+for k, v in pairs(data.raw["technology"]) do
+  tf.removeRecipeUnlock(v.name, "iron-stick")
+end
+data.raw.recipe["iron-stick"].enabled = true
 data:extend({
   {
     type = "recipe",
