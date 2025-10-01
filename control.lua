@@ -34,7 +34,7 @@ remote.add_interface("BrimStuff-Milestones", {
                     {type="group", name="Resources"},
                     {type="item",  name="rubber", quantity=1},
                     {type="item",  name="gunpowder", quantity=1},
-                    {type="fluid",  name=mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", quantity=1},
+                    {type="fluid",  name=script.active_mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", quantity=1},
                 }
             }
         }
