@@ -207,7 +207,9 @@ if parts.waste then
 end
 
 if mods["bzgas"] then
-  tf.addRecipeUnlock("basic-chemistry", "basic-waste-treatment")
+  if parts.waste then
+    tf.addRecipeUnlock("basic-chemistry", "basic-waste-treatment")
+  end
   tf.addRecipeUnlock("basic-chemistry", "potassium-nitrate")
   tf.addRecipeUnlock("basic-chemistry", "gunpowder")
   tf.addRecipeUnlock("basic-chemistry", "nitric-acid-early")
