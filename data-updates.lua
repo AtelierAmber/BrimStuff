@@ -47,7 +47,7 @@ if parts.waste then
     rm.AddProductRaw("polyacrylonitrile", {type="fluid", name="chemical-waste", amount=5})
     rm.AddProductRaw("fullerenes", {type="fluid", name="chemical-waste", amount=20})
     rm.AddProductRaw("nanotubes", {type="fluid", name=parts.acidwaste, amount=1})
-    rm.RemoveProduct("nanotubes", "dirty-water", 99999)
+    rm.RemoveProduct("nanotubes", "kr-dirty-water", 99999)
     rm.AddProductRaw("carbon-black", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 10 or 5})
     rm.AddProductRaw("graphite-carbon-black", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 30 or 15})
   end
@@ -285,8 +285,8 @@ if mods["MoreScience"] then
 end
 
 if mods["Krastorio2"] then
-  rm.ReplaceIngredient("fertilizer", "biomass", "potassium-nitrate", 1)
-  rm.ReplaceProportional("biters-research-data", "coke", "gunpowder", 2)
+  rm.ReplaceIngredient("kr-fertilizer", "kr-biomass", "potassium-nitrate", 1)
+  rm.ReplaceProportional("kr-biter-research-data", "coke", "gunpowder", 2)
 else
   if mods["MoreScience"] then
     rm.ReplaceProportional("chemical-science-fluid", "sulfur", "explosives", 2)

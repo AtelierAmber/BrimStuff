@@ -82,10 +82,10 @@ end
 --TTH + K2 already adds saltpeter byproducts
 if not (mods["ThemTharHills-Updated"] and mods["Krastorio2"]) then
   if mods["Krastorio2"] then
-    rm.AddProductRaw("sand", {type="item", name="potassium-nitrate", amount=1, probability=0.15})
+    rm.AddProductRaw("kr-sand", {type="item", name="potassium-nitrate", amount=1, probability=0.15})
   end
   if mods["aai-industry"] then
-    rm.AddProductRaw("sand-from-stone", {type="item", name="potassium-nitrate", amount=1, probability=0.05})
+    rm.AddProductRaw("sand", {type="item", name="potassium-nitrate", amount=1, probability=0.05})
   end
 end
 
@@ -203,12 +203,12 @@ local ammo_recipes = {
   {"firearm-magazine-copper-lead", 1},
   {"firearm-magazine-iron-only", 1},
   {"pistol-magazine-bismuth", 1},
-  {"rifle-magazine", 2},
+  {"kr-rifle-magazine", 2},
   {"rifle-magazine-iron-lead", 2},
   {"rifle-magazine-copper-lead", 2},
   {"rifle-magazine-iron", 2},
   {"rifle-magazine-bismuth", 2},
-  {"anti-material-rifle-magazine", 3} --[sic]
+  {"kr-anti-materiel-rifle-magazine", 3} --[sic]
 }
 
 for k, v in pairs(ammo_recipes) do

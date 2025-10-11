@@ -7,8 +7,7 @@ end
 local function AddToIngList(ingredients, toadd, count)
   local done = false
   if not data.raw.item[toadd] or not data.raw.fluid[toadd] then
-    log("BRASSTACKS LOG: " .. toadd .. " not found!")
-    if data.raw.item["kr-" .. toadd] or data.raw.fluid["kr-" .. toadd] then log("K2 Version found!") end
+    if data.raw.item["kr-" .. toadd] or data.raw.fluid["kr-" .. toadd] then log("K2 Version found for " .. toadd .. "!") end
   end
   for k, v in pairs(ingredients) do
     if v[1] == toadd then
@@ -46,8 +45,7 @@ end
 local function RemoveFromIngList(ingredients, toremove, count)
   local done = false
   if not data.raw.item[toremove] or not data.raw.fluid[toremove] then
-    log("BRASSTACKS LOG: " .. toremove .. " not found!")
-    if data.raw.item["kr-" .. toremove] or data.raw.fluid["kr-" .. toremove] then log("K2 Version found!") end
+    if data.raw.item["kr-" .. toremove] or data.raw.fluid["kr-" .. toremove] then log("K2 Version found for " .. toremove .. "!") end
   end
   for k, v in pairs(ingredients) do
     if v[1] == toremove then
@@ -128,12 +126,10 @@ local function ReplaceInIngList(ingredients, toadd, toremove, count)
   local done = false
   local delete_index = -1
   if not data.raw.item[toadd] or not data.raw.fluid[toadd] then
-    log("BRASSTACKS LOG: " .. toadd .. " not found!")
-    if data.raw.item["kr-" .. toadd] or data.raw.fluid["kr-" .. toadd] then log("K2 Version found!") end
+    if data.raw.item["kr-" .. toadd] or data.raw.fluid["kr-" .. toadd] then log("K2 Version found for " .. toadd .. "!") end
   end
   if not data.raw.item[toremove] or not data.raw.fluid[toremove] then
-    log("BRASSTACKS LOG: " .. toremove .. " not found!")
-    if data.raw.item["kr-" .. toremove] or data.raw.fluid["kr-" .. toremove] then log("K2 Version found!") end
+    if data.raw.item["kr-" .. toremove] or data.raw.fluid["kr-" .. toremove] then log("K2 Version found for " .. toremove .. "!") end
   end
   for k, v in pairs(ingredients) do
     if v[1] == toadd then

@@ -42,16 +42,16 @@ end
 if mods["Krastorio2"] then
   if parts.waste then
     rm.AddProductRaw("ammonia-from-potassium-nitrate", {type="fluid", name="chemical-waste", amount=10})
-    rm.AddProductRaw("imersite-crystal", {type="fluid", name=parts.acidwaste, amount=20})
+    rm.AddProductRaw("kr-imersite-crystal", {type="fluid", name=parts.acidwaste, amount=20})
 
     if not mods["space-exploration"] then
-      rm.AddProductRaw("ai-core", {type="fluid", name=parts.acidwaste, amount=10})
+      rm.AddProductRaw("kr-ai-core", {type="fluid", name=parts.acidwaste, amount=10})
 
     end
   end
 
   if parts.waste and mods["ThemTharHills-Updated"] then
-    rm.AddProductRaw("empty-antimatter-fuel-cell", {type="fluid", name=parts.acidwaste, amount=50})
+    rm.AddProductRaw("kr-empty-antimatter-fuel-cell", {type="fluid", name=parts.acidwaste, amount=50})
     rm.AddProductRaw("kr-advanced-solar-panel", {type="fluid", name=parts.acidwaste, amount=25})
   end
 
@@ -59,12 +59,12 @@ if mods["Krastorio2"] then
     tf.addRecipeUnlock("kr-advanced-chemistry", "ammonia-from-potassium-nitrate")
   end
 
-  rm.ReplaceIngredient("pollution-filter", "plastic-bar", "rubber", 1)
+  rm.ReplaceIngredient("kr-pollution-filter", "plastic-bar", "rubber", 1)
 
   if not mods["BrassTacks-Updated"] then
     rm.AddIngredient("kr-steel-pump", gasket, 2*gasket_cost)
-    rm.AddIngredient("rocket-fuel-with-ammonia", gasket, gasket_cost)
-    rm.AddIngredient("rocket-fuel-with-hydrogen-chloride", gasket, gasket_cost)
+    rm.AddIngredient("kr-rocket-fuel-with-ammonia", gasket, gasket_cost)
+    rm.AddIngredient("kr-rocket-fuel-with-hydrogen-chloride", gasket, gasket_cost)
   end
 
   if not mods["IfNickel-Updated"] then
@@ -75,8 +75,8 @@ if mods["Krastorio2"] then
     tf.addPrereq("kr-fluids-chemistry", "rubber")
   end
 
-  rm.AddIngredient("fuel-1", "toluene", 1)
-  rm.RemoveIngredient("fuel-1", "light-oil", 10)
+  rm.AddIngredient("kr-fuel-from-light-oil", "toluene", 1)
+  rm.RemoveIngredient("kr-fuel-from-light-oil", "light-oil", 10)
 end
 
 if mods["FluidMustFlow"] then
