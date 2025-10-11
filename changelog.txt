@@ -1,7 +1,15 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.3
-Date: ????
+Date: 2025-10-11
   Changes:
+    - Added logging for missing recipes.
+    - Changed name to Brim Stuff Legacy
+  Bugfixes:
+    - Lots of Krastorio 2 fixes
+    - Space Ex migration fixes
+    - Fixed productivity not being usable for recipes
+    - Fixed crass with bz gas when waste was disabled
+    - Fixed locale for certain recipes
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.2
 Date: 2025-09-30
