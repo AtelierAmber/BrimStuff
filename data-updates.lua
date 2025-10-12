@@ -51,9 +51,6 @@ if parts.waste then
     rm.AddProductRaw("carbon-black", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 10 or 5})
     rm.AddProductRaw("graphite-carbon-black", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 30 or 15})
   end
-
-else
-  rm.AddProductRaw("sulfur", nil) --killing and biting and etc
 end
 rm.RemoveProduct("sulfur", "sulfur", 1)
 tf.removeRecipeUnlock("sulfur-processing", "sulfur")
