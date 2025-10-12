@@ -41,7 +41,7 @@ end
 
 function techfuncs.addPrereq(tech, prereq)
 	if not (data.raw.technology[tech] and data.raw.technology[prereq]) then
-    error("Trying to add recipe: " .. prereq .. "(" .. serpent.line(data.raw.technology[prereq], {maxlength = 10}) .. ") to tech: " .. tech .. " (" .. serpent.line(data.raw.technology[tech], {maxlength = 10}) .. ")but one doesn't exist! ")
+    error("Trying to add tech prereq: " .. prereq .. "(" .. serpent.line(data.raw.technology[prereq], {maxlength = 10}) .. ") to tech: " .. tech .. " (" .. serpent.line(data.raw.technology[tech], {maxlength = 10}) .. ")but one doesn't exist! ")
 		return
 	end
 	local pr = data.raw.technology[tech].prerequisites
@@ -103,7 +103,7 @@ end
 
 function techfuncs.addSciencePack(tech, item)
 	if not (data.raw.technology[tech] and data.raw.tool[item]) then
-    error("Trying to add recipe: " .. item .. "(" .. serpent.line(data.raw.tool[item], {maxlength = 10}) .. ") to tech: " .. tech .. " (" .. serpent.line(data.raw.technology[tech], {maxlength = 10}) .. ")but one doesn't exist! ")
+    error("Trying to add science: " .. item .. "(" .. serpent.line(data.raw.tool[item], {maxlength = 10}) .. ") to tech: " .. tech .. " (" .. serpent.line(data.raw.technology[tech], {maxlength = 10}) .. ")but one doesn't exist! ")
 		return
 	end
 	local t = data.raw.technology[tech]
