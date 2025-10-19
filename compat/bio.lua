@@ -6,7 +6,7 @@ local cu = require("category-utils")
 if mods["Bio_Industries"] then
   tf.removeRecipeUnlock("bi-tech-bio-farming", "bi-wood-from-pulp")
 
-  if not mods["bztungsten"] then --tech deadlock if lamps are later
+  if not parts.bz.tungsten then --tech deadlock if lamps are later
     tf.addPrereq("rubber", "bi-tech-bio-farming")
     rm.ReplaceProportional("rubber", "wood", "resin", 1)
   end

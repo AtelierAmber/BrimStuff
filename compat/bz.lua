@@ -4,11 +4,11 @@ local rm = require("recipe-modify")
 local cu = require("category-utils")
 
 if parts.waste then
-  if mods["bzcarbon"] then
+  if parts.bz.carbon then
     rm.AddProductRaw("graphene", {type="fluid", name=parts.acidwaste, amount=5})
   end
 
-  if mods["bzchlorine"] then
+  if parts.bz.chlorine then
     rm.AddProductRaw("hydrogen-chloride-salt", {type="fluid", name="chemical-waste", amount=10})
     if mods["ThemTharHills-Updated"] then
       rm.AddProductRaw("ferric-chloride-hcl", {type="fluid", name="depleted-acid", amount=15})
@@ -23,7 +23,7 @@ if parts.waste then
   end
 end
 
-if mods["bzcarbon"] then
+if parts.bz.carbon then
   rm.AddIngredient("nanotubes", "toluene", 1)
   if not mods["Krastorio2"] then
     rm.multiply("fullerenes", 2, true, true, true)

@@ -119,7 +119,7 @@ if not mods["Krastorio2"] then
             recipe = "chemical-plant"
           }
         },
-        prerequisites = {mods["IfNickel-Updated"] and "valves" or "rubber", data.raw.item["hardened-hull"] and "hardened-hull" or "steel-processing", not data.raw.item["hardened-hull"] and "logistic-science-pack" or nil, mods["bztungsten"] and "tungsten-processing" or nil},
+        prerequisites = {mods["IfNickel-Updated"] and "valves" or "rubber", data.raw.item["hardened-hull"] and "hardened-hull" or "steel-processing", not data.raw.item["hardened-hull"] and "logistic-science-pack" or nil, parts.bz.tungsten and "tungsten-processing" or nil},
         unit = {
           count = 50,
           ingredients = {
@@ -206,7 +206,7 @@ if parts.waste then
   })
 end
 
-if mods["bzgas"] then
+if parts.bz.gas then
   if parts.waste then
     tf.addRecipeUnlock("basic-chemistry", "basic-waste-treatment")
   end

@@ -21,7 +21,7 @@ if parts.waste then
       end
     end
     rm.AddProductRaw("gold-powder", {type="fluid", name="depleted-acid", amount=mods["Krastorio2"] and 20 or 10})
-    if mods["bzgold"] then
+    if parts.bz.gold then
       rm.AddProductRaw("cpu", {type="fluid", name="depleted-acid", amount=50})
     else
       rm.AddProductRaw("processing-unit", {type="fluid", name="depleted-acid", amount=mods["Krastorio2"] and 10 or 5})
@@ -29,7 +29,7 @@ if parts.waste then
     rm.AddProductRaw("silicon-wafer", {type="fluid", name="depleted-acid", amount=20})
     rm.AddProductRaw("trace-gold-from-copper", {type="fluid", name="depleted-acid", amount=30})
   else
-    if mods["bzgold"] then
+    if parts.bz.gold then
       rm.AddProductRaw("cpu", {type="fluid", name="chemical-waste", amount=50})
     else
       rm.AddProductRaw("processing-unit", {type="fluid", name="chemical-waste", amount=mods["Krastorio2"] and 10 or 5})
@@ -37,13 +37,13 @@ if parts.waste then
     rm.AddProductRaw("silicon-wafer", {type="fluid", name="chemical-waste", amount=20})
   end
 
-  if mods["bzgas"] then
+  if parts.bz.gas then
     rm.AddProductRaw("bakelite", {type="fluid", name="chemical-waste", amount=10})
     rm.AddProductRaw("bakelite-hcl", {type="fluid", name="chemical-waste", amount=15})
     rm.AddProductRaw("phenol-from-oil", {type="fluid", name="chemical-waste", amount=10})
   end
 
-  if mods["bzcarbon"] then
+  if parts.bz.bzcarbon then
     rm.AddProductRaw("polyacrylonitrile", {type="fluid", name="chemical-waste", amount=5})
     rm.AddProductRaw("fullerenes", {type="fluid", name="chemical-waste", amount=20})
     rm.AddProductRaw("nanotubes", {type="fluid", name=parts.acidwaste, amount=1})
@@ -76,7 +76,7 @@ if mods["Krastorio2"] then
   tf.addPrereq("sulfur-processing", "kr-fluids-chemistry")
 else
   tf.addPrereq("sulfur-processing", "electric-chemical-plant")
-  if mods["bzchlorine"] then
+  if parts.bz.chlorine then
     tf.removePrereq("chlorine-processing", "fluid-handling")
     tf.addPrereq("chlorine-processing", "electric-chemical-plant")
   end
@@ -217,7 +217,7 @@ local gasket_ratio = 2
 if mods["BrassTacks-Updated"] then
   gasket_item = "airtight-seal"
   gasket_ratio = 1
-else if mods["bzcarbon"] then
+else if parts.bz.carbon then
   gasket_item = "gasket"
   gasket_ratio = 1
   tf.addRecipeUnlock("rubber", "gasket")
@@ -236,7 +236,7 @@ end
 if mods["IfNickel-Updated"] then
   tf.addPrereq("valves", "rubber")
   if not mods["BrassTacks-Updated"] then
-    if mods["bzcarbon"] then
+    if parts.bz.carbon then
       rm.ReplaceProportional("invar-valve", "graphite", gasket_item, gasket_ratio/2)
     else
       rm.ReplaceProportional("invar-valve", "copper-plate", gasket_item, gasket_ratio/2)

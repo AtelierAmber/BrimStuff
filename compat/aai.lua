@@ -5,7 +5,7 @@ local cu = require("category-utils")
 
 local gasket = "rubber"
 local gasket_cost = 2
-if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
+if parts.bz.carbon and not mods["BrassTacks-Updated"] then
   gasket = "gasket"
   gasket_cost = 1
 end

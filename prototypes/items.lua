@@ -134,7 +134,7 @@ if not mods["Krastorio2"] then
   })
 end
 
-if mods["bzgas"] then
+if parts.bz.gas then
   data:extend({
     {
       type = "item",
@@ -148,7 +148,7 @@ if mods["bzgas"] then
   })
 end
 
-if mods["bzcarbon"] and not mods["BrassTacks-Updated"] then
+if parts.bz.carbon and not mods["BrassTacks-Updated"] then
   data:extend({
     {
       type = "item",

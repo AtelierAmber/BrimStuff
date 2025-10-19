@@ -1,4 +1,5 @@
 local resource_autoplace = require("resource-autoplace")
+local parts = require("variable-parts")
 
 data.raw.planet.nauvis.map_gen_settings.autoplace_controls["sulfur-ore"] = {}
 data.raw.planet.nauvis.map_gen_settings.autoplace_settings.entity.settings["sulfur-ore"] = {}
@@ -23,7 +24,7 @@ data:extend({
     order="a-b-y",
     tree_removal_probability = 0.9,
     tree_removal_max_distance = 32 * 32,
-    map_color = mods["bztin"] and {0.65, 1, 0.15} or {0.8, 1, 0.3},
+    map_color = parts.bz.tin and {0.65, 1, 0.15} or {0.8, 1, 0.3},
     minable =
     {
       mining_particle = "sulfur-particle",

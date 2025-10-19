@@ -8,7 +8,7 @@ local gasket_ratio = 2
 if mods["BrassTacks-Updated"] then
   gasket_item = "airtight-seal"
   gasket_ratio = 1
-else if mods["bzcarbon"] then
+else if parts.bz.carbon then
   gasket_item = "gasket"
   gasket_ratio = 1
 end end

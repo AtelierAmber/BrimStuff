@@ -8,7 +8,7 @@ data:extend({
   }
 })
 
-if mods["bzgas"] and not settings.startup["brimstuff-clobber-bz-chemical-plant"].value then
+if parts.bz.gas and not settings.startup["brimstuff-clobber-bz-chemical-plant"].value then
   data.raw["assembling-machine"]["basic-chemical-plant"].crafting_categories = {"basic-chemistry"}
   return
 end
