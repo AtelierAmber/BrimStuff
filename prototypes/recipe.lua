@@ -376,7 +376,7 @@ if parts.waste then
               icon_size = 64
             },
             {
-              icon = "__bzcarbon__/graphics/icons/carbon-black.png",
+              icon = "__bzcarbon" .. (mods["bzcarbon2"] and "2" or "") .. "__/graphics/icons/carbon-black.png",
               icon_size = 64,
               icon_mipmaps = 4,
               scale = 0.25,
