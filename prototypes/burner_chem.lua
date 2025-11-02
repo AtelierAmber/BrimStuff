@@ -40,7 +40,7 @@ bcp.fluid_boxes = {
     pipe_covers = pipecoverspictures(),
     base_area = 10,
     base_level = -1,
-    pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1.2} }},
+    pipe_connections = {{ flow_direction="input", direction = defines.direction.north, position = {0, -1} }},
     secondary_draw_orders = { north = -1, west = -1 },
     volume = 1000
   },
@@ -50,7 +50,7 @@ bcp.fluid_boxes = {
     pipe_covers = pipecoverspictures(),
     base_area = 1,
     base_level = 1,
-    pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1.2} }},
+    pipe_connections = {{ flow_direction="output", direction = defines.direction.south, position = {0, 1} }},
     secondary_draw_orders = { north = -1, west = -1 },
     volume = 1000,
   }
