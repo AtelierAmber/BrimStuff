@@ -1,11 +1,12 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
-Date: ????
-  Changes:
+Date: 2025-11-03
+  Bugfixes:
+    - Fixed crash. I messed up formatting
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.9
 Date: 2025-11-02
-  Changes:
+  Bugfixes:
     - Fix pipe connections for Basic Chemical Plant
     - Fix crash when prereqs were missing for Electric Chemical Plant
 ---------------------------------------------------------------------------------------------------
