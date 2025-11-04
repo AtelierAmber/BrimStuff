@@ -4,7 +4,7 @@ local rm = require("recipe-modify")
 local cu = require("category-utils")
 
 if mods["RenaiTransportation"] then
-  tf.addPrereq("se~no", "rubber")
+  tf.addPrereq("se-no", "rubber")
 
   --yes, these are the correct names
   rm.AddIngredient("BouncePlateRecipie", "rubber", 2)
