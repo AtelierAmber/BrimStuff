@@ -1,7 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.11
-Date: ????
+Date: 2025-11-09
   Bugfixes:
+    - Fixed crash when waste was disabled and no other mods were enabled
     - Fixed Renai compat naming
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.10
