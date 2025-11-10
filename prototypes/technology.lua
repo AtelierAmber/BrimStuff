@@ -144,7 +144,7 @@ if parts.waste then
           }
          },
         effects =
-        {
+        tf.compilePrereqs{
           {
             type = "unlock-recipe",
             recipe = "advanced-waste-treatment"
@@ -174,7 +174,7 @@ if parts.waste then
           }
          },
         effects =
-        {
+        tf.compilePrereqs{
           {
             type = "unlock-recipe",
             recipe = "sulfur-disposal"
@@ -225,7 +225,7 @@ else
             }
            },
           effects =
-          {
+          tf.compilePrereqs{
             {
               type = "unlock-recipe",
               recipe = "basic-chemical-plant"
