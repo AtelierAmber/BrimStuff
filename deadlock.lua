@@ -1,4 +1,4 @@
-if deadlock then
+if deadlock and deadlock.add_stack then
   deadlock.add_stack("potassium-nitrate", "__BrimStuff-Updated__/graphics/icons/stacking/potassium-nitrate-stacked.png", "deadlock-stacking-1", 64)
   deadlock.add_stack("rubber", "__BrimStuff-Updated__/graphics/icons/stacking/rubber-stacked.png", "deadlock-stacking-1", 64)
   deadlock.add_stack("gunpowder", "__BrimStuff-Updated__/graphics/icons/stacking/gunpowder-stacked.png", "deadlock-stacking-2", 64)
@@ -6,7 +6,7 @@ if deadlock then
   data.raw.item["deadlock-stack-potassium-nitrate"].ib_badge = "KN"
 end
 
-if deadlock_crating then
+if deadlock_crating and deadlock.add_crate  then
   deadlock_crating.add_crate("potassium-nitrate", "deadlock-crating-1")
   deadlock_crating.add_crate("rubber", "deadlock-crating-1")
   deadlock_crating.add_crate("gunpowder", "deadlock-crating-2")
