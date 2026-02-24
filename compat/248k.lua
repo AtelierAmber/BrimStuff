@@ -15,13 +15,13 @@ end end
 
 if mods["248k-Redux"] then
   if not mods["IfNickel-Updated"] then
-    rm.AddIngredient("fu_burner_recipe", gasket_item, 5 * gasket_ratio)
-    rm.ReplaceProportional("el_grower_recipe", "iron-gear-wheel", gasket_item, gasket_ratio)
-    rm.AddIngredient("el_burner_kerosene_recipe", gasket_item, 5 * gasket_ratio)
-    rm.AddIngredient("el_pressurizer_recipe", gasket_item, 10 * gasket_ratio)
-    rm.AddIngredient("fi_refinery_recipe", gasket_item, 20 * gasket_ratio)
-    rm.AddIngredient("fu_turbine_recipe", gasket_item, 20 * gasket_ratio)
-    rm.AddIngredient("fu_boiler_recipe", gasket_item, 20 * gasket_ratio)
-    rm.AddIngredient("fu_exchanger_item_recipe", gasket_item, 20 * gasket_ratio)
+    rm.AddIngredient("fu_burner", gasket_item, 5 * gasket_ratio)
+    rm.ReplaceProportional("el_grower", "iron-gear-wheel", gasket_item, gasket_ratio)
+    rm.AddIngredient("el_burner_kerosene", gasket_item, 5 * gasket_ratio)
+    rm.AddIngredient("el_pressurizer", gasket_item, 10 * gasket_ratio)
+    rm.AddIngredient("fi_refinery", gasket_item, 20 * gasket_ratio)
+    rm.AddIngredient("fu_turbine", gasket_item, 20 * gasket_ratio)
+    rm.AddIngredient("fu_boiler", gasket_item, 20 * gasket_ratio)
+    rm.AddIngredient("fu_exchanger", gasket_item, 20 * gasket_ratio)
   end
 end
