@@ -38,7 +38,7 @@
     "? RenaiTransportation",
     "? cargo-ships",
     "? intermodal-containers",
-    "? 248k-Redux",
+    "? 248k-Redux >= 0.1.35",
     "? LunarLandings"
   ],
   "package": {
