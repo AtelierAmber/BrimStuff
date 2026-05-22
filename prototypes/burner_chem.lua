@@ -120,10 +120,10 @@ bcp.graphics_set.working_visualisations[5] = {
         filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-outer.png",
         frame_count = 47,
         line_length = 16,
-        width = 46,
-        height = 94,
+        width = 90,
+        height = 188,
         animation_speed = 0.5,
-        shift = util.by_pixel(-2, -75)
+        shift = util.by_pixel(-2, -120)
       }
     }
 
@@ -137,21 +137,10 @@ bcp.graphics_set.working_visualisations[6] = {
           filename = "__base__/graphics/entity/chemical-plant/chemical-plant-smoke-inner.png",
           frame_count = 47,
           line_length = 16,
-          width = 20,
-          height = 42,
+          width = 40,
+          height = 84,
           animation_speed = 0.5,
-          shift = util.by_pixel(-2, -49),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/chemical-plant/hr-chemical-plant-smoke-inner.png",
-            frame_count = 47,
-            line_length = 16,
-            width = 40,
-            height = 84,
-            animation_speed = 0.5,
-            shift = util.by_pixel(-2, -49),
-            scale = 0.5
-          }
+          shift = util.by_pixel(-2, -69)
         }
       }
 
