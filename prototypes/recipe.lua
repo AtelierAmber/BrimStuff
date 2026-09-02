@@ -568,7 +568,7 @@ if parts.waste and mods["ThemTharHills-Updated"] then
           icon_mipmaps = 4,
         }
       },
-      category = mods["Krastorio2"] and "kr-fluid-filtration" or "chemistry",
+      categories = mods["Krastorio2"] and {"kr-fluid-filtration"} or {"chemistry"},
       subgroup = "waste-treatment",
       order = "c",
       allow_decomposition = false,
@@ -604,7 +604,7 @@ if parts.waste and mods["space-exploration"] then
           shift = {-8, -8}
         }
       },
-      category = mods["Krastorio2"] and "kr-fluid-filtration" or "chemistry",
+      categories = mods["Krastorio2"] and {"kr-fluid-filtration"} or {"chemistry"},
       subgroup = "waste-treatment",
       order = "k",
       enabled = false,
