@@ -14,14 +14,14 @@ if mods["Bio_Industries"] then
   rm.ReplaceProportional("toluene-wood", "wood", "resin", 1)
   rm.SetCategory("bi-resin-wood", "basic-chemistry")
   rm.SetCategory("bi-resin-pulp", "basic-chemistry")
-  rm.AddProductRaw("bi-resin-wood", {type="item", name="toluene", amount=1, probability=0.01})
+  rm.AddProductRaw("bi-resin-wood", {type="item", name="toluene", amount=1, independent_probability=0.01})
 
   if parts.coke_tol then
-    rm.AddProductRaw("bi-charcoal-2", {type="item", name="toluene", amount=1, probability=0.25})
-    rm.AddProductRaw("bi-coal-1", {type="item", name="toluene", amount=1, probability=0.05})
-    rm.AddProductRaw("bi-coal-2", {type="item", name="toluene", amount=1, probability=0.05})
-    rm.AddProductRaw("bi-pellet-coke", {type="item", name="toluene", amount=1, probability=0.05}) --made of solid fuel, solid fuel is made with toluene. no infinite toluene from this process.
-    rm.AddProductRaw("bi-coke-coal", {type="item", name="toluene", amount=1, probability=0.5})
+    rm.AddProductRaw("bi-charcoal-2", {type="item", name="toluene", amount=1, independent_probability=0.25})
+    rm.AddProductRaw("bi-coal-1", {type="item", name="toluene", amount=1, independent_probability=0.05})
+    rm.AddProductRaw("bi-coal-2", {type="item", name="toluene", amount=1, independent_probability=0.05})
+    rm.AddProductRaw("bi-pellet-coke", {type="item", name="toluene", amount=1, independent_probability=0.05}) --made of solid fuel, solid fuel is made with toluene. no infinite toluene from this process.
+    rm.AddProductRaw("bi-coke-coal", {type="item", name="toluene", amount=1, independent_probability=0.5})
   end
   rm.multiply("bi-solid-fuel", 3, true, true, true)
   rm.RemoveIngredient("bi-solid-fuel", "wood-bricks", 2)
