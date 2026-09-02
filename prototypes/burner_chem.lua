@@ -1,5 +1,6 @@
 local parts = require("variable-parts")
 local util = require("util")
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
 
 data:extend({
   {
@@ -36,7 +37,7 @@ bcp.icons = bcp_icon
 bcp.fluid_boxes = {
   {
     production_type = "input",
-    pipe_picture = assembler3pipepictures(),
+    pipe_picture = assembler_pictures.assembler3pipepictures,
     pipe_covers = pipecoverspictures(),
     base_area = 10,
     base_level = -1,
@@ -46,7 +47,7 @@ bcp.fluid_boxes = {
   },
   {
     production_type = "output",
-    pipe_picture = assembler3pipepictures(),
+    pipe_picture = assembler_pictures.assembler3pipepictures,
     pipe_covers = pipecoverspictures(),
     base_area = 1,
     base_level = 1,
@@ -183,7 +184,7 @@ data:extend({
   {
     type = "recipe",
     name = "basic-chemical-plant",
-    category = "crafting",
+    categories = {"crafting"},
     energy_required = 1,
     results = {{type="item", name="basic-chemical-plant", amount=1}},
     enabled = false,
