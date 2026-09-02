@@ -10,7 +10,7 @@ data:extend({
   {
     type = "recipe",
     name = "gunpowder",
-    category = "basic-chemistry",
+    categories = {"basic-chemistry"},
     energy_required = 2,
     ingredients = {{type="item", name="sulfur", amount=2}, {type="item", name="coal", amount=2}, {type="item", name="potassium-nitrate", amount=1}, {type="fluid", name="water", amount=60}},
     results = tf.compilePrereqs{{type="item", name="gunpowder", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=60} or nil},
@@ -26,7 +26,7 @@ data:extend({
   {
     type = "recipe",
     name = "rubber",
-    category = "basic-chemistry",
+    categories = {"basic-chemistry"},
     energy_required = 1,
     ingredients = {{type="item", name="wood", amount=3}, {type="item", name="sulfur", amount=1}, {type="fluid", name="water", amount=50}},
     results = tf.compilePrereqs{{type="item", name="rubber", amount=2}, parts.waste and {type="fluid", name="chemical-waste", amount=20} or nil},
@@ -42,7 +42,7 @@ data:extend({
   {
     type = "recipe",
     name = "toluene-coal",
-    category = "chemistry",
+    categories = {"chemistry"},
     energy_required = 1,
     ingredients = {{type="item", name="coal", amount=1}, {type="fluid", name="steam", amount=5}},
     results = tf.compilePrereqs{{type="item", name="toluene", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=5} or nil},
@@ -72,7 +72,7 @@ data:extend({
   {
     type = "recipe",
     name = "toluene-wood",
-    category = "chemistry",
+    categories = {"chemistry"},
     energy_required = 2,
     ingredients = {{type="item", name="wood", amount=5}, {type="fluid", name="steam", amount=10}},
     results = tf.compilePrereqs{{type="item", name="toluene", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=15} or nil},
@@ -102,7 +102,7 @@ data:extend({
   {
     type = "recipe",
     name = "potassium-nitrate",
-    category = "basic-chemistry",
+    categories = {"basic-chemistry"},
     energy_required = 1,
     ingredients = {{type="item", name="stone", amount=1}, {type="fluid", name="water", amount=30}},
     results = tf.compilePrereqs{{type="item", name="potassium-nitrate", amount=1}, parts.waste and {type="fluid", name="chemical-waste", amount=10} or nil},
@@ -119,7 +119,7 @@ data:extend({
   {
     type = "recipe",
     name = "drive-belt",
-    category = "crafting",
+    categories = {"crafting"},
     energy_required = 2,
     ingredients = {{type="item", name="rubber", amount=3}, {type="item", name="iron-gear-wheel", amount=2}, parts.preferred({"bronze-plate", "iron-stick"}, {1, 1})},
     results = {{type="item", name="drive-belt", amount=1}},
@@ -128,7 +128,7 @@ data:extend({
   {
     type = "recipe",
     name = "synthetic-rubber",
-    category = "chemistry",
+    categories = {"chemistry"},
     energy_required = 1,
     ingredients = {{type="fluid", name="petroleum-gas", amount=20}, {type="item", name="sulfur", amount=1}, {type="item", name="toluene", amount=1}},
     results = tf.compilePrereqs{{type="item", name="rubber", amount=3}, parts.waste and {type="fluid", name="chemical-waste", amount=35} or nil},
@@ -172,7 +172,7 @@ data:extend({
     },
     subgroup = "fluid-recipes",
     order = "y04[nitric-acid]alt", --this is where it belongs with k2 and/or se. otherwise it will be moved later.
-    category = "basic-chemistry",
+    categories = {"basic-chemistry"},
     enabled = false,
     energy_required = 1,
     allow_decomposition = false,
@@ -192,7 +192,7 @@ if parts.bz.carbon and not mods["BrassTacks-Updated"] then
     {
       type = "recipe",
       name = "gasket",
-      category = "advanced-crafting",
+      categories = {"advanced-crafting"},
       energy_required = 0.5,
       ingredients = {{type="item", name="rubber", amount=1}, {type="item", name="graphite", amount=1}},
       results = {{type="item", name="gasket", amount=1}},
@@ -212,7 +212,7 @@ if parts.waste then
           icon_size = 64,
         }
       },
-      category = "basic-chemistry",
+      categories = {"basic-chemistry"},
       subgroup = "waste-treatment",
       order = "a",
       main_product = "",
@@ -246,7 +246,7 @@ if parts.waste then
           shift = {-8, -8}
         }
       },
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "waste-treatment",
       order = "b",
       main_product = "",
@@ -284,7 +284,7 @@ if parts.waste then
         subgroup = "waste-treatment",
         order = "d",
         main_product = "",
-        category = "chemistry",
+        categories = {"chemistry"},
         enabled = false,
         energy_required = 1,
         allow_decomposition = false,
@@ -316,7 +316,7 @@ if parts.waste then
         },
         subgroup = "waste-treatment",
         order = "e",
-        category = "chemistry",
+        categories = {"chemistry"},
         main_product = "",
         enabled = false,
         energy_required = 1,
@@ -349,7 +349,7 @@ if parts.waste then
         },
         subgroup = "waste-treatment",
         order = "fa",
-        category = "chemistry",
+        categories = {"chemistry"},
         main_product = "",
         enabled = false,
         energy_required = 1,
@@ -385,7 +385,7 @@ if parts.waste then
           },
           subgroup = "waste-treatment",
           order = "f",
-          category = "chemistry",
+          categories = {"chemistry"},
           main_product = "",
           enabled = false,
           energy_required = 1,
@@ -423,7 +423,7 @@ if parts.waste then
             shift = {-8, -8}
           }
         },
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "waste-treatment",
         order = "ba",
         main_product = "",
@@ -456,7 +456,7 @@ if parts.waste then
             shift = {-8, -8}
           }
         },
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "waste-treatment",
         order = "bb",
         main_product = "",
@@ -481,7 +481,7 @@ if not mods["Krastorio2"] then
     {
       type = "recipe",
       name = "nitric-acid",
-      category = "chemistry",
+      categories = {"chemistry"},
       enabled = false,
       energy_required = 1,
       subgroup = "fluid-recipes",
@@ -504,7 +504,7 @@ if parts.bz.gas then
     {
       type = "recipe",
       name = "tnt",
-      category = "chemistry",
+      categories = {"chemistry"},
       enabled = false,
       energy_required = 1,
       ingredients = {{type="fluid", name="sulfuric-acid", amount=10}, {type="fluid", name=mods["Krastorio2"] and "kr-nitric-acid" or "nitric-acid", amount=10}, {type="item", name="toluene", amount=1}},
@@ -538,7 +538,7 @@ if mods["Krastorio2"] and not mods["ThemTharHills-Updated"] then
           scale = 0.25
         }
       },
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "fluid-recipes",
       order = "y03[ammonia]alt",
       allow_decomposition = false,
@@ -636,7 +636,7 @@ if parts.waste and mods["space-exploration"] then
           shift = {-8, -8}
         }
       },
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "waste-treatment",
       order = "l",
       enabled = false,
@@ -675,7 +675,7 @@ if parts.waste and mods["space-exploration"] then
           icon_size = 64
         }
       },
-      category = "hard-recycling",
+      categories = {"hard-recycling"},
       subgroup = "recycling",
       order = "zz",
       enabled = false,
@@ -701,7 +701,7 @@ if parts.waste and mods["space-exploration"] then
           shift = {-8, -8}
         }
       },
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "waste-treatment",
       order = "m",
       enabled = false,
@@ -733,7 +733,7 @@ if parts.waste and mods["space-exploration"] then
           shift = {-8, -8}
         }
       },
-      category = "chemistry",
+      categories = {"chemistry"},
       subgroup = "waste-treatment",
       order = "n",
       enabled = false,
