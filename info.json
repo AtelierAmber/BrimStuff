@@ -7,7 +7,7 @@
   "description": "Updated for 2.1. Adds minable sulfur, burner chemical plant, gunpowder and rubber. Changes how sulfur is obtained from oil. Optionally adds chemical waste reprocessing and greenhouses.",
   "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.1",
+    "base >= 2.1.20",
     "? ThemTharHills-Updated",
     "? BrassTacks-Updated",
     "? IfNickel-Updated",
