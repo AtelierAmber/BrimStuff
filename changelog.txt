@@ -6,6 +6,12 @@ Date: ????
 Version: 2.0.15
 Date: 2026-11-22
   Changes:
+    - Update to 2.1
+      - migrated assembler pipe pictures
+      - change category to categories in recipes
+      - change probability to independent_probability
+      - change data.raw.tool to data.raw.item
+      - change fuel_category to fuel_categories in toluene item
 ---------------------------------------------------------------------------------------------------
 Version: 2.0.14
 Date: 2026-06-03

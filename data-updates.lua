@@ -84,22 +84,22 @@ end
 
 if parts.coke_tol then
   if mods["Krastorio2"] then
-    rm.AddProductRaw("coke", {type="item", name="toluene", amount=1, probability=0.6})
-    rm.AddProductRaw("phenol", {type="item", name="toluene", amount=1, probability=0.6})
+    rm.AddProductRaw("coke", {type="item", name="toluene", amount=1, independent_probability=0.6})
+    rm.AddProductRaw("phenol", {type="item", name="toluene", amount=1, independent_probability=0.6})
   else
-    rm.AddProductRaw("coke", {type="item", name="toluene", amount=1, probability=0.1})
-    rm.AddProductRaw("phenol", {type="item", name="toluene", amount=1, probability=0.2})
+    rm.AddProductRaw("coke", {type="item", name="toluene", amount=1, independent_probability=0.1})
+    rm.AddProductRaw("phenol", {type="item", name="toluene", amount=1, independent_probability=0.2})
   end
   if data.raw.recipe["solid-fuel-from-coal"] then
-    rm.AddProductRaw("solid-fuel-from-coal", {type="item", name="toluene", amount=1, probability=0.2})
-    rm.AddProductRaw("woodcoke", {type="item", name="toluene", amount=1, probability=0.2})
+    rm.AddProductRaw("solid-fuel-from-coal", {type="item", name="toluene", amount=1, independent_probability=0.2})
+    rm.AddProductRaw("woodcoke", {type="item", name="toluene", amount=1, independent_probability=0.2})
   else
-    rm.AddProductRaw("woodcoke", {type="item", name="toluene", amount=1, probability=0.1})
+    rm.AddProductRaw("woodcoke", {type="item", name="toluene", amount=1, independent_probability=0.1})
   end
 end
 
 if parts.coke_tol or parts.oil_tol then
-  rm.AddProductRaw("phenol-from-oil", {type="item", name="toluene", amount=1, probability=0.2})
+  rm.AddProductRaw("phenol-from-oil", {type="item", name="toluene", amount=1, independent_probability=0.2})
 end
 
 local boom_factor = 1
@@ -150,20 +150,20 @@ rm.AddIngredient("solid-fuel-from-heavy-oil", "toluene", 1)
 
 rm.ReplaceIngredient("grenade", "coal", "gunpowder", 10)
 
-rm.AddProductRaw("basic-oil-processing", {type="item", name="sulfur", amount=1, probability=0.5})
-rm.AddProductRaw("advanced-oil-processing", {type="item", name="sulfur", amount=1, probability=0.5})
+rm.AddProductRaw("basic-oil-processing", {type="item", name="sulfur", amount=1, independent_probability=0.5})
+rm.AddProductRaw("advanced-oil-processing", {type="item", name="sulfur", amount=1, independent_probability=0.5})
 if mods["aai-industry"] then
-  rm.AddProductRaw("oil-processing-heavy", {type="item", name="sulfur", amount=1, probability=0.5})
+  rm.AddProductRaw("oil-processing-heavy", {type="item", name="sulfur", amount=1, independent_probability=0.5})
 end
 
 if parts.oil_tol then
-  rm.AddProductRaw("basic-oil-processing", {type="item", name="toluene", amount=1, probability=0.15})
-  rm.AddProductRaw("advanced-oil-processing", {type="item", name="toluene", amount=1, probability=0.15})
+  rm.AddProductRaw("basic-oil-processing", {type="item", name="toluene", amount=1, independent_probability=0.15})
+  rm.AddProductRaw("advanced-oil-processing", {type="item", name="toluene", amount=1, independent_probability=0.15})
   if mods["aai-industry"] then
-    rm.AddProductRaw("oil-processing-heavy", {type="item", name="toluene", amount=1, probability=0.15})
+    rm.AddProductRaw("oil-processing-heavy", {type="item", name="toluene", amount=1, independent_probability=0.15})
   end
-  rm.AddProductRaw("heavy-oil-cracking", {type="item", name="toluene", amount=1, probability=0.1})
-  rm.AddProductRaw("light-oil-cracking", {type="item", name="toluene", amount=1, probability=0.1})
+  rm.AddProductRaw("heavy-oil-cracking", {type="item", name="toluene", amount=1, independent_probability=0.1})
+  rm.AddProductRaw("light-oil-cracking", {type="item", name="toluene", amount=1, independent_probability=0.1})
 end
 
 if not rm.CheckIngredient("assembling-machine-2", "gearbox") then

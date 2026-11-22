@@ -82,10 +82,10 @@ end
 --TTH + K2 already adds saltpeter byproducts
 if not (mods["ThemTharHills-Updated"] and mods["Krastorio2"]) then
   if mods["Krastorio2"] then
-    rm.AddProductRaw("kr-sand", {type="item", name="potassium-nitrate", amount=1, probability=0.15})
+    rm.AddProductRaw("kr-sand", {type="item", name="potassium-nitrate", amount=1, independent_probability=0.15})
   end
   if mods["aai-industry"] then
-    rm.AddProductRaw("sand", {type="item", name="potassium-nitrate", amount=1, probability=0.05})
+    rm.AddProductRaw("sand", {type="item", name="potassium-nitrate", amount=1, independent_probability=0.05})
   end
 end
 
