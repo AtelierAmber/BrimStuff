@@ -42,7 +42,7 @@ data:extend({
     subgroup = "raw-material",
     order = "gc",
     stack_size = stacksize_override or 100,
-    fuel_category = "chemical",
+    fuel_categories = { "chemical" },
     fuel_value = "1MJ"
   },
   {

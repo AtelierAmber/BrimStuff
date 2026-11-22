@@ -1,6 +1,7 @@
 local util = require("util")
 local parts = require("variable-parts")
 local tf = require("techfuncs")
+local assembler_pictures = require("__base__.prototypes.entity.assembler-pictures")
 
 if not settings.startup["brimstuff-greenhouse"].value then
   return
@@ -18,7 +19,7 @@ gh.next_upgrade = nil
 gh.fluid_boxes = {
   {
     production_type = "input",
-    pipe_picture = assembler2pipepictures(),
+    pipe_picture = assembler_pictures.assembler2pipepictures,
     pipe_covers = pipecoverspictures(),
     base_area = 10,
     base_level = -1,
@@ -28,7 +29,7 @@ gh.fluid_boxes = {
   },
   {
     production_type = "output",
-    pipe_picture = assembler2pipepictures(),
+    pipe_picture = assembler_pictures.assembler2pipepictures,
     pipe_covers = pipecoverspictures(),
     base_area = 1,
     base_level = 1,
@@ -209,7 +210,7 @@ data:extend({
   {
     type = "recipe",
     name = "brimstuff-greenhouse",
-    category = "crafting",
+    categories = {"crafting"},
     subgroup = "production-machine",
     energy_required = 1,
     results = {{type="item", name="brimstuff-greenhouse", amount=1}},
@@ -226,7 +227,7 @@ data:extend({
   {
     type = "recipe",
     name = "brimstuff-wood-growth",
-    category = "brimstuff-botany",
+    categories = {"brimstuff-botany"},
     subgroup = "brimstuff-botany",
     order = "a",
     energy_required = 2,
@@ -239,7 +240,7 @@ data:extend({
     name = "fertilizer-slurry",
     subgroup = "brimstuff-botany",
     order = "b",
-    category = "basic-chemistry",
+    categories = {"basic-chemistry"},
     energy_required = 1,
     results = {{type="fluid", name="fertilizer-slurry", amount=100}},
     enabled = false,
@@ -292,7 +293,7 @@ if mods["LunarLandings"] then
     {
       type = "recipe",
       name = "brimstuff-oxygen",
-      category = "brimstuff-botany",
+      categories = {"brimstuff-botany"},
       subgroup = "brimstuff-botany",
       order = "ab",
       energy_required = 2,
